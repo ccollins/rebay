@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
-APP_ID = 'searched-8e3a-4e50-af08-c2e48cb3b020'
+APP_ID = ''
 
 module Ebay
   describe Finding do
