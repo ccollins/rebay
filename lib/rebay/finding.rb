@@ -1,7 +1,8 @@
 require 'net/http'
 require 'json'
+require 'ostruct'
 
-module Ebay
+module Rebay
   class Finding
     BASE_URL = 'http://svcs.ebay.com/services/search/FindingService/v1'
     
@@ -67,13 +68,26 @@ module Ebay
           url += "&#{key}=#{params[key]}"
         end
       end
-      print url
-      print "\n"
+      
       return url
     end
     
     def get_json_response(url)
       JSON.parse(Net::HTTP.get_response(URI.parse(url)).body)
+    end
+    
+    def transform_json_response(response)    
+      if response.class == Hash
+        r = Hash.new
+        response.keys.each do |k|
+          r[k.to_sym] = transform_json_response(response[k])
+        end
+        return r
+      elsif response.class == Array and response.size == 1  
+        return transform_json_response(response[0])
+      else
+        return response
+      end
     end
   end
 end

@@ -1,3 +1,3 @@
-Ebay-api
+rebay
 ========
 Work in progress!

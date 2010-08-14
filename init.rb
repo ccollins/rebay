@@ -1,1 +1,1 @@
-require File.join(File.dirname(__FILE__), "lib", "ebay")
+require File.join(File.dirname(__FILE__), "lib", "rebay")
