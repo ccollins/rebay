@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
-APP_ID = ''
+APP_ID = 'searched-8e3a-4e50-af08-c2e48cb3b020'
 
 module Ebay
   describe Finding do
@@ -85,7 +85,7 @@ module Ebay
       end
       
       it "should return a hash response" do
-        @finder.find_items_by_category(1).class.should eq(Hash)
+        @finder.find_items_by_category({:categoryId => 1}).class.should eq(Hash)
       end
     end
     
@@ -99,7 +99,7 @@ module Ebay
       end
       
       it "should return a hash response" do
-        @finder.find_items_by_product(53039031).class.should eq(Hash)
+        @finder.find_items_by_product({:productId => 53039031}).class.should eq(Hash)
       end
     end
   
@@ -113,7 +113,7 @@ module Ebay
       end
       
       it "should return a hash response" do
-        @finder.find_items_by_keywords('feist').class.should eq(Hash)
+        @finder.find_items_by_keywords({:keywords => 'feist'}).class.should eq(Hash)
       end
     end
     
@@ -145,7 +145,7 @@ module Ebay
       end
       
       it "should return a hash response" do
-        @finder.get_histograms(1).class.should eq(Hash)
+        @finder.get_histograms({:categoryId => 1}).class.should eq(Hash)
       end
     end
     
@@ -159,7 +159,7 @@ module Ebay
       end
       
       it "should return a hash response" do
-        @finder.get_search_keywords_recommendation('feist').class.should eq(Hash)
+        @finder.get_search_keywords_recommendation({:keywords => 'feist'}).class.should eq(Hash)
       end
     end
     
