@@ -1,0 +1,44 @@
+{
+    "getSearchKeywordsRecommendationResponse": [
+        {
+            "ack": [
+                "Warning"
+            ],
+            "errorMessage": [
+                {
+                    "error": [
+                        {
+                            "errorId": [
+                                "59"
+                            ],
+                            "domain": [
+                                "Marketplace"
+                            ],
+                            "severity": [
+                                "Warning"
+                            ],
+                            "category": [
+                                "Request"
+                            ],
+                            "message": [
+                                "No recommendation was identified for the submitted keywords."
+                            ],
+                            "subdomain": [
+                                "Search"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "version": [
+                "1.5.0"
+            ],
+            "timestamp": [
+                "2010-08-13T21:08:30.081Z"
+            ],
+            "keywords": [
+                ""
+            ]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "getSearchKeywordsRecommendationResponse": [
+        {
+            "ack": [
+                "Success"
+            ],
+            "version": [
+                "1.5.0"
+            ],
+            "timestamp": [
+                "2010-08-13T21:11:02.539Z"
+            ],
+            "keywords": [
+                "accordion"
+            ]
+        }
+    ]
+}
