@@ -73,7 +73,7 @@ module Rebay
     end
     
     def get_json_response(url)
-      JSON.parse(Net::HTTP.get_response(URI.parse(url)).body)
+      transform_json_response(JSON.parse(Net::HTTP.get_response(URI.parse(url)).body))
     end
     
     def transform_json_response(response)    
