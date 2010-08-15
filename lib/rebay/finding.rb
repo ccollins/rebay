@@ -1,16 +1,9 @@
 require 'net/http'
 require 'json'
-require 'ostruct'
 
 module Rebay
   class Finding
     BASE_URL = 'http://svcs.ebay.com/services/search/FindingService/v1'
-    
-    attr_accessor :app_id
-    
-    def initialize(app_id)
-      @app_id = app_id
-    end
     
     #http://developer.ebay.com/DevZone/finding/CallRef/findItemsAdvanced.html
     def find_items_advanced(params)
@@ -62,7 +55,7 @@ module Rebay
     
     private
     def build_request_url(service, params=nil)
-      url = "#{BASE_URL}?OPERATION-NAME=#{service}&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=#{@app_id}ID&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD"
+      url = "#{BASE_URL}?OPERATION-NAME=#{service}&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=#{Rebay::Api.app_id}ID&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD"
       unless params.nil?
         params.keys.each do |key|
           url += "&#{key}=#{params[key]}"

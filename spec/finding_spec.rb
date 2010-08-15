@@ -1,31 +1,23 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
-APP_ID = ''
-
 module Rebay
   describe Finding do
     it "should specify base url" do
       Finding::BASE_URL.should_not be_nil
     end
     
-    context "on creation" do
-      it "should raise exception if app_id not given" do
-        lambda { Finding.new }.should raise_error(ArgumentError)
-      end
-      
-      it "should accept app_id" do
-        lambda { Finding.new(APP_ID) }.should_not raise_error(ArgumentError)
-      end
-      
+    context "on creation" do      
       it "should return app id" do
-        @finder = Finding.new(APP_ID)
-        @finder.app_id.should == APP_ID
+        Rebay::Api.configure do |rebay|
+          rebay.app_id = 'test'
+        end
+        Rebay::Api.app_id.should == 'test'
       end
     end
     
     context "after creation" do
       before(:each) do
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should provide find_items_advanced" do
@@ -59,7 +51,7 @@ module Rebay
     
     context "when calling find_items_advanced" do
       before(:each) do 
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should fail without storeName or keywords defined" do
@@ -77,7 +69,7 @@ module Rebay
     
     context "when calling find_items_by_category" do
       before(:each) do 
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should fail without category_id" do
@@ -91,7 +83,7 @@ module Rebay
     
     context "when calling find_items_by_product" do
       before(:each) do 
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should fail without product_id" do
@@ -105,7 +97,7 @@ module Rebay
   
     context "when calling find_items_by_keywords" do
       before(:each) do 
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should fail without keywords" do
@@ -119,7 +111,7 @@ module Rebay
     
     context "when calling find_items_in_ebay_stores" do
       before(:each) do 
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should fail without storeName or keywords defined" do
@@ -137,7 +129,7 @@ module Rebay
     
     context "when calling get_histograms" do
       before(:each) do 
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should fail without category_id" do
@@ -151,7 +143,7 @@ module Rebay
     
     context "when calling get_search_keywords_recommendation" do
       before(:each) do 
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should fail without keywords" do
@@ -167,7 +159,7 @@ module Rebay
       before(:each)  do
         @json_happy = JSON.parse(File.read(File.dirname(__FILE__) + '/json_responses/finding/get_search_keywords_recommendation_happy.json'))
         @json_sad = JSON.parse(File.read(File.dirname(__FILE__) + '/json_responses/finding/get_search_keywords_recommendation_sad.json'))
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should transform the happy json" do
@@ -191,7 +183,7 @@ module Rebay
     
     context "when calling get_version" do
       before(:each) do 
-        @finder = Finding.new(APP_ID)
+        @finder = Finding.new
       end
       
       it "should return a hash response" do
