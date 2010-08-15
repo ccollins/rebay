@@ -7,7 +7,7 @@ module Rebay
     end
     
     def self.app_id
-      return @@app_id
+      @@app_id
     end
       
     def self.configure
