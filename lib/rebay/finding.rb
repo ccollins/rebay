@@ -1,9 +1,7 @@
-require 'net/http'
-require 'json'
-
 module Rebay
-  class Finding
+  class Finding < Rebay::Api
     BASE_URL = 'http://svcs.ebay.com/services/search/FindingService/v1'
+    VERSION = '1.0.0'
     
     #http://developer.ebay.com/DevZone/finding/CallRef/findItemsAdvanced.html
     def find_items_advanced(params)
@@ -55,18 +53,9 @@ module Rebay
     
     private
     def build_request_url(service, params=nil)
-      url = "#{BASE_URL}?OPERATION-NAME=#{service}&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=#{Rebay::Api.app_id}ID&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD"
-      unless params.nil?
-        params.keys.each do |key|
-          url += "&#{key}=#{params[key]}"
-        end
-      end
-      
+      url = "#{BASE_URL}?OPERATION-NAME=#{service}&SERVICE-VERSION=#{VERSION}&SECURITY-APPNAME=#{Rebay::Api.app_id}ID&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD"
+      url += build_rest_payload(params)
       return url
-    end
-    
-    def get_json_response(url)
-      transform_json_response(JSON.parse(Net::HTTP.get_response(URI.parse(url)).body))
     end
     
     def transform_json_response(response)    

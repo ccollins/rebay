@@ -1,13 +1,18 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
 module Rebay
-  describe Finding do
+  describe Shopping do
     it "should specify base url" do
       Finding::BASE_URL.should_not be_nil
     end
     
-    it "should specify version" do
-      Finding::VERSION.should_not be_nil
+    context "on creation" do      
+      it "should return app id" do
+        Rebay::Api.configure do |rebay|
+          rebay.app_id = 'test'
+        end
+        Rebay::Api.app_id.should == 'test'
+      end
     end
     
     context "after creation" do

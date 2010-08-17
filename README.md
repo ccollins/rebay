@@ -1,6 +1,6 @@
 rebay
 ========
-Rebay only supports the finding api at the moment.  Perhaps I'll flesh out other apis, but I only have need for one right now.
+Rebay only supports the finding api and the cateogries portion of the shopping api at the moment.  Perhaps I'll flesh out other apis, but I only have need for one right now.
 
 Configuration
 -------------
