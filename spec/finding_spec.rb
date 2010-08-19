@@ -59,6 +59,7 @@ module Rebay
       
       it "should return a hash response with keywords as parameter" do
         @finder.find_items_advanced({:keywords => 'feist'}).class.should eq(Rebay::Response)
+        a = @finder.find_items_advanced({:keywords => 'feist'})
       end
     end
     
