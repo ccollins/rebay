@@ -29,26 +29,36 @@ module Rebay
     
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetShippingCosts.html
     def get_shipping_costs(params)
+      raise ArgumentError unless params[:itemId]
+      get_json_response(build_request_url('GetShippingCosts', params))
     end
     
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetMultipleItems.html
     def get_multiple_items(params)
+      raise ArgumentError unless params[:itemId]
+      get_json_response(build_request_url('GetMultipleItems', params))
     end
     
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetUserProfile.html
     def get_user_profile(params)
+      raise ArgumentError unless params[:userId]
+      get_json_response(build_request_url('GetUserProfile', params))
     end
     
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindPopularSearches.html
     def find_popular_searches(params)
+      raise ArgumentError unless params[:categoryId]
+      get_json_response(build_request_url('FindPopularSearches', params))
     end
     
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindPopularItems.html
-    def find_popular_items(params)
+    def find_popular_items(params={})
+      get_json_response(build_request_url('FindPopularItems', params))
     end
       
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindReviewsandGuides.html
-    def find_reviews_and_guides(params)
+    def find_reviews_and_guides(params={})
+      get_json_response(build_request_url('FindReviewsAndGuides', params))
     end
    
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetCategoryInfo.html

@@ -20,7 +20,7 @@ module Rebay
     
     protected
     def get_json_response(url)
-      transform_json_response(JSON.parse(Net::HTTP.get_response(URI.parse(url)).body))
+      Rebay::Response.new(JSON.parse(Net::HTTP.get_response(URI.parse(url)).body))
     end
     
     def build_rest_payload(params)
@@ -31,20 +31,6 @@ module Rebay
         end
       end
       return payload
-    end
-    
-    def transform_json_response(response)    
-      if response.class == Hash
-        r = Hash.new
-        response.keys.each do |k|
-          r[k.to_sym] = transform_json_response(response[k])
-        end
-        return r
-      elsif response.class == Array and response.size == 1  
-        return transform_json_response(response[0])
-      else
-        return response
-      end
     end
   end
 end
