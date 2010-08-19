@@ -67,7 +67,7 @@ module Rebay
         @finder = Finding.new
       end
       
-      it "should fail without category_id" do
+      it "should fail without categoryId" do
         lambda { @finder.get_search_keywords_recommendation }.should raise_error(ArgumentError)
       end
       
@@ -81,7 +81,7 @@ module Rebay
         @finder = Finding.new
       end
       
-      it "should fail without product_id" do
+      it "should fail without productId" do
         lambda { @finder.find_items_by_product }.should raise_error(ArgumentError)
       end
       
@@ -127,7 +127,7 @@ module Rebay
         @finder = Finding.new
       end
       
-      it "should fail without category_id" do
+      it "should fail without categoryId" do
         lambda { @finder.get_histograms }.should raise_error(ArgumentError)
       end
       
@@ -147,32 +147,6 @@ module Rebay
       
       it "should return a hash response" do
         @finder.get_search_keywords_recommendation({:keywords => 'feist'}).class.should eq(Hash)
-      end
-    end
-    
-    context "when parsing response" do
-      before(:each)  do
-        @json_happy = JSON.parse(File.read(File.dirname(__FILE__) + '/json_responses/finding/get_search_keywords_recommendation_happy.json'))
-        @json_sad = JSON.parse(File.read(File.dirname(__FILE__) + '/json_responses/finding/get_search_keywords_recommendation_sad.json'))
-        @finder = Finding.new
-      end
-      
-      it "should transform the happy json" do
-        happy = @finder.send :transform_json_response, @json_happy
-        happy.should eq({:getSearchKeywordsRecommendationResponse => {:ack => "Success", :version => "1.5.0", 
-                                                                      :timestamp => "2010-08-13T21:11:02.539Z", :keywords => "accordion"}})
-      end
-      
-      it "should transform the sad json" do
-        sad = @finder.send :transform_json_response, @json_sad
-        sad.should eq({:getSearchKeywordsRecommendationResponse =>
-                        {:ack => "Warning",
-                         :errorMessage => {:error => {:errorId => "59", :domain => "Marketplace", :severity => "Warning",
-                                                      :category => "Request", :message => "No recommendation was identified for the submitted keywords.",
-                                                      :subdomain => "Search"}},
-                         :version => "1.5.0",
-                         :timestamp => "2010-08-13T21:08:30.081Z",
-                         :keywords => ""}})
       end
     end
     
