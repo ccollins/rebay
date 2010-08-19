@@ -69,12 +69,12 @@ module Rebay
         @shopper = Shopping.new
       end
       
-      it "should fail without categoryId" do
+      it "should fail without args" do
         lambda { @shopper.get_category_info }.should raise_error(ArgumentError)
       end
       
       it "should return a hash response" do
-        @shopper.get_category_info({:categoryId => 29223}).class.should eq(Hash)
+        @shopper.get_category_info({:categoryId => 29223}).class.should eq(Rebay::Response)
       end
     end
     
@@ -83,12 +83,12 @@ module Rebay
         @shopper = Shopping.new
       end
       
-      it "should fail without queryKeywords, productId or categoryId defined" do
+      it "should fail without args" do
         lambda { @shopper.find_products }.should raise_error(ArgumentError)
       end
       
       it "should return a hash response" do
-        @shopper.find_products({:queryKeywords => 'harry potter'}).class.should eq(Hash)
+        @shopper.find_products({:queryKeywords => 'harry potter'}).class.should eq(Rebay::Response)
       end
     end
     
@@ -97,12 +97,12 @@ module Rebay
         @shopper = Shopping.new
       end
       
-      it "should fail without queryKeywords, productId" do
+      it "should fail without args" do
         lambda { @shopper.find_half_products }.should raise_error(ArgumentError)
       end
       
       it "should return a hash response" do
-        @shopper.find_half_products({:queryKeywords => 'harry potter'}).class.should eq(Hash)
+        @shopper.find_half_products({:queryKeywords => 'harry potter'}).class.should eq(Rebay::Response)
       end
     end
     
@@ -111,12 +111,12 @@ module Rebay
         @shopper = Shopping.new
       end
       
-      it "should fail without itemId" do
+      it "should fail without args" do
         lambda { @shopper.get_single_item }.should raise_error(ArgumentError)
       end
       
       it "should return a hash response" do
-        @shopper.get_single_item({:itemId => 230139965209}).class.should eq(Hash)
+        @shopper.get_single_item({:itemId => 230139965209}).class.should eq(Rebay::Response)
       end
     end
     
@@ -125,12 +125,88 @@ module Rebay
         @shopper = Shopping.new
       end
       
-      it "should fail without itemId" do
+      it "should fail without args" do
         lambda { @shopper.get_item_status }.should raise_error(ArgumentError)
       end
       
       it "should return a hash response" do
-        @shopper.get_item_status({:itemId => 230139965209}).class.should eq(Hash)
+        @shopper.get_item_status({:itemId => 230139965209}).class.should eq(Rebay::Response)
+      end
+    end
+    
+    context "when calling get_shipping_costs" do
+      before(:each) do
+        @shopper = Shopping.new
+      end
+      
+      it "should fail without args" do
+        lambda { @shopper.get_shipping_costs }.should raise_error(ArgumentError)
+      end
+      
+      it "should return a hash response" do
+        @shopper.get_shipping_costs({:itemId => 230139965209}).class.should eq(Rebay::Response)
+      end
+    end
+    
+    context "when calling get_multiple_items" do
+      before(:each) do
+        @shopper = Shopping.new
+      end
+      
+      it "should fail without args" do
+        lambda { @shopper.get_multiple_items }.should raise_error(ArgumentError)
+      end
+      
+      it "should return a hash response" do
+        @shopper.get_multiple_items({:itemId => 230139965209}).class.should eq(Rebay::Response)
+      end
+    end
+    
+    context "when calling get_user_profile" do
+      before(:each) do
+        @shopper = Shopping.new
+      end
+      
+      it "should fail without args" do
+        lambda { @shopper.get_user_profile }.should raise_error(ArgumentError)
+      end
+      
+      it "should return a hash response" do
+        @shopper.get_user_profile({:userId => 1}).class.should eq(Rebay::Response)
+      end
+    end
+    
+    context "when calling find_popular_searches" do
+      before(:each) do
+        @shopper = Shopping.new
+      end
+      
+      it "should fail without args" do
+        lambda { @shopper.find_popular_searches }.should raise_error(ArgumentError)
+      end
+      
+      it "should return a hash response" do
+        @shopper.find_popular_searches({:categoryId => 1}).class.should eq(Rebay::Response)
+      end
+    end
+    
+    context "when calling find_popular_items" do
+      before(:each) do
+        @shopper = Shopping.new
+      end
+      
+      it "should return a hash response" do
+        @shopper.find_popular_items.class.should eq(Rebay::Response)
+      end
+    end
+    
+    context "when calling find_reviews_and_guides" do
+      before(:each) do
+        @shopper = Shopping.new
+      end
+      
+      it "should return a hash response" do
+        @shopper.find_reviews_and_guides.class.should eq(Rebay::Response)
       end
     end
   end

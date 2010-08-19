@@ -31,37 +31,17 @@ module Rebay
       end
       
       it "should build rest payload from hash" do
-        @api.send(:build_rest_payload, {:test=>'blah', :test2=>'blah', :test3=>'blah'}).should eq("&test=blah&test2=blah&test3=blah")
+        payload = @api.send(:build_rest_payload, {:test=>'blah', :test2=>'blah', :test3=>'blah'})
+        payload.should include("&test=blah")
+        payload.should include("&test2=blah")
+        payload.should include("&test3=blah")
       end
     
       it "should escape html chars" do
-        @api.send(:build_rest_payload, {:test=>'blah', :test2=>'blah', :test3=>'blah blah'}).should eq("&test=blah&test2=blah&test3=blah%20blah")
-      end
-    end
-    
-    context "when parsing response" do
-      before(:each)  do
-        @json_happy = JSON.parse(File.read(File.dirname(__FILE__) + '/json_responses/finding/get_search_keywords_recommendation_happy.json'))
-        @json_sad = JSON.parse(File.read(File.dirname(__FILE__) + '/json_responses/finding/get_search_keywords_recommendation_sad.json'))
-        @api = Api.new
-      end
-      
-      it "should transform the happy json" do
-        happy = @api.send :transform_json_response, @json_happy
-        happy.should eq({:getSearchKeywordsRecommendationResponse => {:ack => "Success", :version => "1.5.0", 
-                                                                      :timestamp => "2010-08-13T21:11:02.539Z", :keywords => "accordion"}})
-      end
-      
-      it "should transform the sad json" do
-        sad = @api.send :transform_json_response, @json_sad
-        sad.should eq({:getSearchKeywordsRecommendationResponse =>
-                        {:ack => "Warning",
-                         :errorMessage => {:error => {:errorId => "59", :domain => "Marketplace", :severity => "Warning",
-                                                      :category => "Request", :message => "No recommendation was identified for the submitted keywords.",
-                                                      :subdomain => "Search"}},
-                         :version => "1.5.0",
-                         :timestamp => "2010-08-13T21:08:30.081Z",
-                         :keywords => ""}})
+         payload = @api.send(:build_rest_payload, {:test=>'blah', :test2=>'blah', :test3=>'blah blah'})
+         payload.should include("&test=blah")
+         payload.should include("&test2=blah")
+         payload.should include("&test3=blah%20blah")
       end
     end
   end
