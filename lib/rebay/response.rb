@@ -14,10 +14,6 @@ module Rebay
       return @response[:Ack] == 'Failure'
     end
     
-    def errors
-      return @response[:Errors]
-    end
-    
     def trim(key)
       if @response.has_key?(key)
         @response = @response[key]

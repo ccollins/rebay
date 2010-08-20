@@ -23,5 +23,29 @@ module Rebay
                          :keywords => ""}})
       end
     end
+    
+    it "should return success" do
+      response = Response.new({:Ack => "Success"})
+      response.success?.should be_true
+      response.failure?.should be_false
+    end
+  
+    it "should return failure" do
+      response = Response.new({:Ack => "Failure"})
+      response.failure?.should be_true
+      response.success?.should be_false
+    end
+  
+    it "should trim response" do
+      response = Response.new({:Ack => "Failure", :test => "test"})
+      response.trim(:test)
+      response.response.should eq("test")
+    end
+  
+    it "should not trim response" do
+      response = Response.new({:Ack => "Failure", :test => "test"})
+      response.trim(:nothing)
+      response.response.should eq({:Ack => "Failure", :test => "test"})
+    end
   end
 end
