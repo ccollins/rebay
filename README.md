@@ -1,9 +1,9 @@
-Work in Progress
-================
-
 rebay
 ========
-Rebay only supports the finding api and the cateogries portion of the shopping api at the moment.  Perhaps I'll flesh out other apis, but I only have need for one right now.
+Rebay is a very simple wrapper for the ebay finding and shopping APIs.  Please see the ebay documentation for the proper input arguments and expected output. 
+
+http://developer.ebay.com/products/shopping/
+http://developer.ebay.com/products/finding/
 
 Configuration
 -------------
@@ -16,7 +16,7 @@ Create and require a config.rb, or if using rails create an initializer (rebay.r
 		
 Use
 ---
-If you have questions about optional/required parameters, please check the ebay finding api docs.  The source of this api wrapper also includes links to specific api call documentation.  Basically, pass whatever options into the rebay api call and they will be passed through into the actual api call.  When getting your return response, the json from ebay is transformed just a bit.  You can still expect the same keys to come through in the hash, they just aren't annoyingly wrapped in an array... everywhere.
+If you have questions about optional/required parameters, please check the ebay api docs.  The source of this api wrapper also includes links to specific api call documentation.  Basically, pass whatever options into the rebay api call and they will be passed through into the actual api call.  When getting your return response, the json from ebay is transformed just a bit.  You can still expect the same keys to come through in the hash, they just aren't annoyingly wrapped in an array... everywhere.
 
 
 Example
@@ -24,7 +24,7 @@ Example
 To get search keyword recommendations for *acordian*:
 
 	finder = Rebay::Finding.new
-	finder.get_search_keywords_recommendation({:keywords => 'feist'})
+	response = finder.get_search_keywords_recommendation({:keywords => 'acordian'})
 	
 Ebay will return an array filled result something like this:
 		
@@ -32,7 +32,13 @@ Ebay will return an array filled result something like this:
 	
 For my own sanity, I transform this response into a more standard ruby hash.
 
-	{:getSearchKeywordsRecommendationResponse => {:ack => "Success", :version => "1.5.0", :timestamp => "2010-08-13T21:11:02.539Z", :keywords => "accordion"}}
+	{:ack => "Success", :version => "1.5.0", :timestamp => "2010-08-13T21:11:02.539Z", :keywords => "accordion"}
+	
+In the case of the finding api responses, I removed the XXXResponse key and use the resulting hash as the response (to be inline with the shopping api responses).
+
+You can check for success or failure of the request:
+	response.success?
+	response.failure?
 	
 MIT License
 -----------
