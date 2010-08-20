@@ -2,8 +2,8 @@ rebay
 ========
 Rebay is a very simple wrapper for the ebay finding and shopping APIs.  Please see the ebay documentation for the proper input arguments and expected output. 
 
-http://developer.ebay.com/products/shopping/
-http://developer.ebay.com/products/finding/
+[Ebay Shopping Api Documentation](http://developer.ebay.com/products/shopping/)
+[Ebay Finding Api Documentation](http://developer.ebay.com/products/finding/)
 
 Configuration
 -------------
@@ -30,11 +30,9 @@ Ebay will return an array filled result something like this:
 		
 	{"getSearchKeywordsRecommendationResponse": [{"ack": ["Success"],"version": ["1.5.0"],"timestamp": ["2010-08-13T21:11:02.539Z"],"keywords": ["accordion"]}]}
 	
-For my own sanity, I transform this response into a more standard ruby hash.
+For my own sanity, I transform this response into a more standard ruby hash and in the case of the finding api responses, I removed the XXXResponse key and use the resulting hash as the response (to be inline with the shopping api responses).
 
 	{:ack => "Success", :version => "1.5.0", :timestamp => "2010-08-13T21:11:02.539Z", :keywords => "accordion"}
-	
-In the case of the finding api responses, I removed the XXXResponse key and use the resulting hash as the response (to be inline with the shopping api responses).
 
 You can check for success or failure of the request:
 	response.success?
