@@ -3,6 +3,7 @@ rebay
 Rebay is a very simple wrapper for the ebay finding and shopping APIs.  Please see the ebay documentation for the proper input arguments and expected output. 
 
 [Ebay Shopping Api Documentation](http://developer.ebay.com/products/shopping/)
+
 [Ebay Finding Api Documentation](http://developer.ebay.com/products/finding/)
 
 Configuration
