@@ -53,6 +53,7 @@ module Rebay
     
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindPopularItems.html
     def find_popular_items(params={})
+      raise ArgumentError unless params[:categoryId] or params[:queryKeywords]
       get_json_response(build_request_url('FindPopularItems', params))
     end
       

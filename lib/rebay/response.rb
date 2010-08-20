@@ -7,7 +7,21 @@ module Rebay
     end
     
     def success?
-      return @response['Ack'] == 'Success'
+      return @response[:Ack] == 'Success'
+    end
+    
+    def failure?
+      return @response[:Ack] == 'Failure'
+    end
+    
+    def errors
+      return @response[:Errors]
+    end
+    
+    def trim(key)
+      if @response.has_key?(key)
+        @response = @response[key]
+      end
     end
     
     protected

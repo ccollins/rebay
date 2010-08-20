@@ -2,6 +2,11 @@ require File.dirname(__FILE__) + '/spec_helper'
 
 module Rebay
   describe Finding do
+    before(:each) do
+        @finder = Finding.new
+        @finder.stub!(:get_json_response).and_return(Rebay::Response.new({:Ack => 'Success'}))
+    end
+      
     it "should specify base url" do
       Finding::BASE_URL.should_not be_nil
     end
@@ -11,10 +16,6 @@ module Rebay
     end
     
     context "after creation" do
-      before(:each) do
-        @finder = Finding.new
-      end
-      
       it "should provide find_items_advanced" do
         @finder.should respond_to(:find_items_advanced)
       end
@@ -44,11 +45,7 @@ module Rebay
       end
     end
     
-    context "when calling find_items_advanced" do
-      before(:each) do 
-        @finder = Finding.new
-      end
-      
+    context "when calling find_items_advanced" do     
       it "should fail without args" do
         lambda { @finder.find_items_advanced }.should raise_error(ArgumentError)
       end
@@ -59,15 +56,14 @@ module Rebay
       
       it "should return a hash response with keywords as parameter" do
         @finder.find_items_advanced({:keywords => 'feist'}).class.should eq(Rebay::Response)
-        a = @finder.find_items_advanced({:keywords => 'feist'})
+      end
+      
+      it "should succeed" do
+        @finder.find_items_advanced({:keywords => 'feist'}).success?.should be_true
       end
     end
     
-    context "when calling find_items_by_category" do
-      before(:each) do 
-        @finder = Finding.new
-      end
-      
+    context "when calling find_items_by_category" do     
       it "should fail without args" do
         lambda { @finder.get_search_keywords_recommendation }.should raise_error(ArgumentError)
       end
@@ -75,13 +71,13 @@ module Rebay
       it "should return a hash response" do
         @finder.find_items_by_category({:categoryId => 1}).class.should eq(Rebay::Response)
       end
+      
+      it "should succeed" do
+        @finder.find_items_by_category({:categoryId => 1}).success?.should be_true
+      end
     end
     
-    context "when calling find_items_by_product" do
-      before(:each) do 
-        @finder = Finding.new
-      end
-      
+    context "when calling find_items_by_product" do    
       it "should fail without args" do
         lambda { @finder.find_items_by_product }.should raise_error(ArgumentError)
       end
@@ -89,13 +85,13 @@ module Rebay
       it "should return a hash response" do
         @finder.find_items_by_product({:productId => 53039031}).class.should eq(Rebay::Response)
       end
+      
+      it "should succeed" do
+        @finder.find_items_by_product({:productId => 53039031}).success?.should be_true
+      end
     end
   
-    context "when calling find_items_by_keywords" do
-      before(:each) do 
-        @finder = Finding.new
-      end
-      
+    context "when calling find_items_by_keywords" do     
       it "should fail without args" do
         lambda { @finder.find_items_by_keywords }.should raise_error(ArgumentError)
       end
@@ -103,13 +99,13 @@ module Rebay
       it "should return a hash response" do
         @finder.find_items_by_keywords({:keywords => 'feist'}).class.should eq(Rebay::Response)
       end
+      
+      it "should succeed" do
+        @finder.find_items_by_keywords({:keywords => 'feist'}).success?.should be_true
+      end
     end
     
     context "when calling find_items_in_ebay_stores" do
-      before(:each) do 
-        @finder = Finding.new
-      end
-      
       it "should fail without args" do
         lambda { @finder.find_items_in_ebay_stores }.should raise_error(ArgumentError)
       end
@@ -121,13 +117,13 @@ module Rebay
       it "should return a hash response with keywords as parameter" do
         @finder.find_items_in_ebay_stores({:keywords => 'feist'}).class.should eq(Rebay::Response)
       end
+      
+      it "should succeed" do
+        @finder.find_items_in_ebay_stores({:keywords => 'feist'}).success?.should be_true
+      end
     end
     
     context "when calling get_histograms" do
-      before(:each) do 
-        @finder = Finding.new
-      end
-      
       it "should fail without args" do
         lambda { @finder.get_histograms }.should raise_error(ArgumentError)
       end
@@ -135,13 +131,13 @@ module Rebay
       it "should return a hash response" do
         @finder.get_histograms({:categoryId => 1}).class.should eq(Rebay::Response)
       end
+      
+      it "should succeed" do
+        @finder.get_histograms({:categoryId => 1}).success?.should be_true
+      end
     end
     
     context "when calling get_search_keywords_recommendation" do
-      before(:each) do 
-        @finder = Finding.new
-      end
-      
       it "should fail without args" do
         lambda { @finder.get_search_keywords_recommendation }.should raise_error(ArgumentError)
       end
@@ -149,15 +145,19 @@ module Rebay
       it "should return a hash response" do
         @finder.get_search_keywords_recommendation({:keywords => 'feist'}).class.should eq(Rebay::Response)
       end
+      
+      it "should succeed" do
+        @finder.get_search_keywords_recommendation({:keywords => 'feist'}).success?.should be_true
+      end
     end
     
     context "when calling get_version" do
-      before(:each) do 
-        @finder = Finding.new
-      end
-      
       it "should return a hash response" do
         @finder.get_version.class.should eq(Rebay::Response)
+      end
+      
+      it "should succeed" do
+        @finder.get_version.success?.should be_true
       end
     end
   end
