@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "lib/rebay.rb",
      "lib/rebay/api.rb",
      "lib/rebay/finding.rb",
+     "lib/rebay/railtie.rb",
      "lib/rebay/response.rb",
      "lib/rebay/shopping.rb",
      "rebay.gemspec"
