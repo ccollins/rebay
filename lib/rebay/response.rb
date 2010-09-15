@@ -7,11 +7,11 @@ module Rebay
     end
     
     def success?
-      return @response[:Ack] == 'Success'
+      return @response["Ack"] == 'Success'
     end
     
     def failure?
-      return @response[:Ack] == 'Failure'
+      return @response["Ack"] == 'Failure'
     end
     
     def trim(key)

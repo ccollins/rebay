@@ -4,7 +4,7 @@ module Rebay
   describe Shopping do
     before(:each) do
       @shopper = Shopping.new
-      @shopper.stub!(:get_json_response).and_return(Rebay::Response.new({:Ack => 'Success'}))
+      @shopper.stub!(:get_json_response).and_return(Rebay::Response.new({"Ack" => "Success"}))
     end
       
     it "should specify base url" do

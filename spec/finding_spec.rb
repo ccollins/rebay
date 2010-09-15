@@ -4,7 +4,7 @@ module Rebay
   describe Finding do
     before(:each) do
         @finder = Finding.new
-        @finder.stub!(:get_json_response).and_return(Rebay::Response.new({:Ack => 'Success'}))
+        @finder.stub!(:get_json_response).and_return(Rebay::Response.new({"Ack" => 'Success'}))
     end
       
     it "should specify base url" do
