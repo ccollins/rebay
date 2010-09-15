@@ -33,7 +33,7 @@ Ebay will return an array filled result something like this:
 	
 For my own sanity, I transform this response into a more standard ruby hash and in the case of the finding api responses, I removed the XXXResponse key and use the resulting hash as the response (to be inline with the shopping api responses).
 
-	{:ack => "Success", :version => "1.5.0", :timestamp => "2010-08-13T21:11:02.539Z", :keywords => "accordion"}
+	{"ack" => "Success", "version" => "1.5.0", "timestamp" => "2010-08-13T21:11:02.539Z", "keywords" => "accordion"}
 
 You can check for success or failure of the request:
 	response.success?
