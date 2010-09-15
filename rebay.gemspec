@@ -26,7 +26,8 @@ Gem::Specification.new do |s|
      "lib/rebay/finding.rb",
      "lib/rebay/railtie.rb",
      "lib/rebay/response.rb",
-     "lib/rebay/shopping.rb"
+     "lib/rebay/shopping.rb",
+     "rebay.gemspec"
   ]
   s.homepage = %q{http://github.com/ccollins/rebay}
   s.rdoc_options = ["--charset=UTF-8"]
