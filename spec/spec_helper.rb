@@ -4,4 +4,7 @@ RSpec.configure do |config|
 end
 
 require File.join(File.dirname(__FILE__), "..", "lib", "rebay")
-require File.dirname(__FILE__) + '/../config'
+
+Rebay::Api.configure do |rebay|
+  rebay.app_id = 'test'
+end

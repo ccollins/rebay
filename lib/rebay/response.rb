@@ -25,7 +25,7 @@ module Rebay
       if response.class == Hash
         r = Hash.new
         response.keys.each do |k|
-          r[to_sym] = transform_json_response(response[k])
+          r[k] = transform_json_response(response[k])
         end
         return r
       elsif response.class == Array and response.size == 1  
