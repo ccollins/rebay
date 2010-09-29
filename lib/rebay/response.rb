@@ -4,7 +4,6 @@ module Rebay
     attr_accessor :result_key
     
     def initialize(json_response)
-      print "INITIAL TRANSFORM ********\n\n\n\n"
       @response = transform_json_response(json_response)
     end
     
@@ -20,6 +19,10 @@ module Rebay
       if @response.has_key?(key.to_s)
         @response = @response[key.to_s]
       end
+    end
+    
+    def each
+      
     end
     
     protected
