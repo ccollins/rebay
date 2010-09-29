@@ -1,7 +1,7 @@
 module Rebay
   class Response
     attr_accessor :response
-    attr_accessor :result_key
+    attr_accessor :results
     
     def initialize(json_response)
       @response = transform_json_response(json_response)
@@ -22,7 +22,13 @@ module Rebay
     end
     
     def each
-      
+      unless @results.nil?
+        if @results.class == Array
+          @results.each { |r| yield r }
+        else
+          yield @results
+        end
+      end
     end
     
     protected

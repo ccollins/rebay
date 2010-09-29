@@ -54,6 +54,18 @@ module Rebay
       response.response.should eq({"Ack" => "Failure", "test" => "test"})
     end
     
+    it "should set result key" do
+      response = Response.new({})
+      response.should respond_to(:results)
+    end
+    
+    it "should provide empty iterator without a result key" do
+      response = Response.new({})
+      count = 0
+      response.each { |r| count = count + 1 }
+      count.should eq(0)
+    end
+    
     context "using find items advanced json" do
       before(:each) do
         @json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/find_items_advanced.json"))
@@ -93,10 +105,17 @@ module Rebay
                               "condition"=>{"conditionId"=>"4000","conditionDisplayName"=>"Very Good"}}]},
                    "paginationOutput"=>{"pageNumber"=>"1","entriesPerPage"=>"2","totalPages"=>"2359","totalEntries"=>"4717"},
                    "itemSearchURL"=>"http:\/\/shop.ebay.com\/i.html?_nkw=tolkien&_ddo=1&_ipg=2&_pgn=1"}
+        @response.results = @response.response['searchResult']['item']
       end
       
       it "should trim format response correctly" do
         @response.response.should eq(@proper)
+      end
+      
+      it "should iterate over results" do
+        count = 0
+        @response.each { |r| count = count + 1 }
+        count.should eq(2)
       end
     end
   end
