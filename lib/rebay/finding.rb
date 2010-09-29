@@ -8,6 +8,7 @@ module Rebay
       raise ArgumentError unless params[:keywords] or params[:categoryId]
       response = get_json_response(build_request_url('findItemsAdvanced', params))
       response.trim(:findItemsAdvancedResponse)
+      response.result_key = 'searchResult'
       return response
     end
   

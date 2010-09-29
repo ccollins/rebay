@@ -1,0 +1,291 @@
+{
+    "findItemsAdvancedResponse": [
+        {
+            "ack": [
+                "Success"
+            ],
+            "version": [
+                "1.7.0"
+            ],
+            "timestamp": [
+                "2010-09-29T01:53:58.039Z"
+            ],
+            "searchResult": [
+                {
+                    "@count": "2",
+                    "item": [
+                        {
+                            "itemId": [
+                                "300471157219"
+                            ],
+                            "title": [
+                                "Minas Tirith 1990 Tolkien fanzine journal LOTR Hobbit"
+                            ],
+                            "globalId": [
+                                "EBAY-US"
+                            ],
+                            "primaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "280"
+                                    ],
+                                    "categoryName": [
+                                        "Magazine Back Issues"
+                                    ]
+                                }
+                            ],
+                            "secondaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "29799"
+                                    ],
+                                    "categoryName": [
+                                        "Other"
+                                    ]
+                                }
+                            ],
+                            "galleryURL": [
+                                "http:\/\/thumbs4.ebaystatic.com\/pict\/3004711572198080_1.jpg"
+                            ],
+                            "viewItemURL": [
+                                "http:\/\/cgi.ebay.com\/Minas-Tirith-1990-Tolkien-fanzine-journal-LOTR-Hobbit-\/300471157219?pt=Magazines"
+                            ],
+                            "paymentMethod": [
+                                "PayPal"
+                            ],
+                            "autoPay": [
+                                "false"
+                            ],
+                            "postalCode": [
+                                "55403"
+                            ],
+                            "location": [
+                                "Minneapolis,MN,USA"
+                            ],
+                            "country": [
+                                "US"
+                            ],
+                            "shippingInfo": [
+                                {
+                                    "shippingServiceCost": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "2.99"
+                                        }
+                                    ],
+                                    "shippingType": [
+                                        "Flat"
+                                    ],
+                                    "shipToLocations": [
+                                        "Worldwide"
+                                    ]
+                                }
+                            ],
+                            "sellingStatus": [
+                                {
+                                    "currentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "16.99"
+                                        }
+                                    ],
+                                    "convertedCurrentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "16.99"
+                                        }
+                                    ],
+                                    "bidCount": [
+                                        "1"
+                                    ],
+                                    "sellingState": [
+                                        "Active"
+                                    ],
+                                    "timeLeft": [
+                                        "P0DT0H3M56S"
+                                    ]
+                                }
+                            ],
+                            "listingInfo": [
+                                {
+                                    "bestOfferEnabled": [
+                                        "false"
+                                    ],
+                                    "buyItNowAvailable": [
+                                        "false"
+                                    ],
+                                    "startTime": [
+                                        "2010-09-22T01:57:54.000Z"
+                                    ],
+                                    "endTime": [
+                                        "2010-09-29T01:57:54.000Z"
+                                    ],
+                                    "listingType": [
+                                        "Auction"
+                                    ],
+                                    "gift": [
+                                        "false"
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "conditionId": [
+                                        "4000"
+                                    ],
+                                    "conditionDisplayName": [
+                                        "Very Good"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "itemId": [
+                                "300471157219"
+                            ],
+                            "title": [
+                                "Minas Tirith 1990 Tolkien fanzine journal LOTR Hobbit"
+                            ],
+                            "globalId": [
+                                "EBAY-US"
+                            ],
+                            "primaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "280"
+                                    ],
+                                    "categoryName": [
+                                        "Magazine Back Issues"
+                                    ]
+                                }
+                            ],
+                            "secondaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "29799"
+                                    ],
+                                    "categoryName": [
+                                        "Other"
+                                    ]
+                                }
+                            ],
+                            "galleryURL": [
+                                "http:\/\/thumbs4.ebaystatic.com\/pict\/3004711572198080_1.jpg"
+                            ],
+                            "viewItemURL": [
+                                "http:\/\/cgi.ebay.com\/Minas-Tirith-1990-Tolkien-fanzine-journal-LOTR-Hobbit-\/300471157219?pt=Magazines"
+                            ],
+                            "paymentMethod": [
+                                "PayPal"
+                            ],
+                            "autoPay": [
+                                "false"
+                            ],
+                            "postalCode": [
+                                "55403"
+                            ],
+                            "location": [
+                                "Minneapolis,MN,USA"
+                            ],
+                            "country": [
+                                "US"
+                            ],
+                            "shippingInfo": [
+                                {
+                                    "shippingServiceCost": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "2.99"
+                                        }
+                                    ],
+                                    "shippingType": [
+                                        "Flat"
+                                    ],
+                                    "shipToLocations": [
+                                        "Worldwide"
+                                    ]
+                                }
+                            ],
+                            "sellingStatus": [
+                                {
+                                    "currentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "16.99"
+                                        }
+                                    ],
+                                    "convertedCurrentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "16.99"
+                                        }
+                                    ],
+                                    "bidCount": [
+                                        "1"
+                                    ],
+                                    "sellingState": [
+                                        "Active"
+                                    ],
+                                    "timeLeft": [
+                                        "P0DT0H3M56S"
+                                    ]
+                                }
+                            ],
+                            "listingInfo": [
+                                {
+                                    "bestOfferEnabled": [
+                                        "false"
+                                    ],
+                                    "buyItNowAvailable": [
+                                        "false"
+                                    ],
+                                    "startTime": [
+                                        "2010-09-22T01:57:54.000Z"
+                                    ],
+                                    "endTime": [
+                                        "2010-09-29T01:57:54.000Z"
+                                    ],
+                                    "listingType": [
+                                        "Auction"
+                                    ],
+                                    "gift": [
+                                        "false"
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "conditionId": [
+                                        "4000"
+                                    ],
+                                    "conditionDisplayName": [
+                                        "Very Good"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "paginationOutput": [
+                {
+                    "pageNumber": [
+                        "1"
+                    ],
+                    "entriesPerPage": [
+                        "2"
+                    ],
+                    "totalPages": [
+                        "2359"
+                    ],
+                    "totalEntries": [
+                        "4717"
+                    ]
+                }
+            ],
+            "itemSearchURL": [
+                "http:\/\/shop.ebay.com\/i.html?_nkw=tolkien&_ddo=1&_ipg=2&_pgn=1"
+            ]
+        }
+    ]
+}

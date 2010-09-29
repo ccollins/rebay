@@ -1,8 +1,10 @@
 module Rebay
   class Response
     attr_accessor :response
+    attr_accessor :result_key
     
     def initialize(json_response)
+      print "INITIAL TRANSFORM ********\n\n\n\n"
       @response = transform_json_response(json_response)
     end
     
@@ -28,8 +30,16 @@ module Rebay
           r[k] = transform_json_response(response[k])
         end
         return r
-      elsif response.class == Array and response.size == 1  
-        return transform_json_response(response[0])
+      elsif response.class == Array 
+        if response.size == 1  
+          return transform_json_response(response[0])
+        else
+          r = Array.new
+          response.each do |a|
+            r.push(transform_json_response(a))
+          end
+          return r
+        end
       else
         return response
       end
