@@ -41,6 +41,12 @@ module Rebay
       response.trim("test")
       response.response.should eq("test")
     end
+    
+    it "should trim response with syn" do
+      response = Response.new({"Ack" => "Failure", "test" => "test"})
+      response.trim(:test)
+      response.response.should eq("test")
+    end
   
     it "should not trim response" do
       response = Response.new({"Ack" => "Failure", "test" => "test"})
