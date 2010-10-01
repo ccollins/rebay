@@ -111,12 +111,6 @@ module Rebay
       it "should trim format response correctly" do
         @response.response.should eq(@proper)
       end
-      
-      it "should iterate over results" do
-        count = 0
-        @response.each { |r| count = count + 1 }
-        count.should eq(2)
-      end
     end
   end
 end

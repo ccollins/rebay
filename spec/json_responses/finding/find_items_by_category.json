@@ -1,0 +1,276 @@
+{
+    "findItemsByCategoryResponse": [
+        {
+            "ack": [
+                "Success"
+            ],
+            "version": [
+                "1.8.0"
+            ],
+            "timestamp": [
+                "2010-10-01T19:13:40.467Z"
+            ],
+            "searchResult": [
+                {
+                    "@count": "2",
+                    "item": [
+                        {
+                            "itemId": [
+                                "230530199073"
+                            ],
+                            "title": [
+                                "Lot of 4 Brand Named Clarinet Mouthpieces-USED"
+                            ],
+                            "globalId": [
+                                "EBAY-US"
+                            ],
+                            "primaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "164784"
+                                    ],
+                                    "categoryName": [
+                                        "Accessories"
+                                    ]
+                                }
+                            ],
+                            "galleryURL": [
+                                "http:\/\/thumbs2.ebaystatic.com\/pict\/2305301990738080_1.jpg"
+                            ],
+                            "viewItemURL": [
+                                "http:\/\/cgi.ebay.com\/Lot-4-Brand-Named-Clarinet-Mouthpieces-USED-\/230530199073?pt=LH_DefaultDomain_0"
+                            ],
+                            "paymentMethod": [
+                                "PayPal"
+                            ],
+                            "autoPay": [
+                                "false"
+                            ],
+                            "postalCode": [
+                                "78956"
+                            ],
+                            "location": [
+                                "Schulenburg,TX,USA"
+                            ],
+                            "country": [
+                                "US"
+                            ],
+                            "shippingInfo": [
+                                {
+                                    "shippingServiceCost": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "5.0"
+                                        }
+                                    ],
+                                    "shippingType": [
+                                        "FlatDomesticCalculatedInternational"
+                                    ],
+                                    "shipToLocations": [
+                                        "Worldwide"
+                                    ]
+                                }
+                            ],
+                            "sellingStatus": [
+                                {
+                                    "currentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "13.5"
+                                        }
+                                    ],
+                                    "convertedCurrentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "13.5"
+                                        }
+                                    ],
+                                    "bidCount": [
+                                        "9"
+                                    ],
+                                    "sellingState": [
+                                        "Active"
+                                    ],
+                                    "timeLeft": [
+                                        "P0DT0H2M36S"
+                                    ]
+                                }
+                            ],
+                            "listingInfo": [
+                                {
+                                    "bestOfferEnabled": [
+                                        "false"
+                                    ],
+                                    "buyItNowAvailable": [
+                                        "false"
+                                    ],
+                                    "startTime": [
+                                        "2010-09-24T19:16:16.000Z"
+                                    ],
+                                    "endTime": [
+                                        "2010-10-01T19:16:16.000Z"
+                                    ],
+                                    "listingType": [
+                                        "Auction"
+                                    ],
+                                    "gift": [
+                                        "false"
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "conditionId": [
+                                        "3000"
+                                    ],
+                                    "conditionDisplayName": [
+                                        "Used"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "itemId": [
+                                "130436155136"
+                            ],
+                            "title": [
+                                "NEW BAND STUDENT Bb CLARINET+11 REED+BOOK+CARE KIT+CASE"
+                            ],
+                            "globalId": [
+                                "EBAY-US"
+                            ],
+                            "primaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "47098"
+                                    ],
+                                    "categoryName": [
+                                        "Bb Soprano"
+                                    ]
+                                }
+                            ],
+                            "galleryURL": [
+                                "http:\/\/thumbs1.ebaystatic.com\/pict\/1304361551368080_1.jpg"
+                            ],
+                            "viewItemURL": [
+                                "http:\/\/cgi.ebay.com\/NEW-BAND-STUDENT-Bb-CLARINET-11-REED-BOOK-CARE-KIT-CASE-\/130436155136?pt=LH_DefaultDomain_0"
+                            ],
+                            "paymentMethod": [
+                                "PayPal",
+                                "VisaMC",
+                                "Discover"
+                            ],
+                            "autoPay": [
+                                "false"
+                            ],
+                            "postalCode": [
+                                "91744"
+                            ],
+                            "location": [
+                                "La Puente,CA,USA"
+                            ],
+                            "country": [
+                                "US"
+                            ],
+                            "shippingInfo": [
+                                {
+                                    "shippingServiceCost": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "0.0"
+                                        }
+                                    ],
+                                    "shippingType": [
+                                        "Free"
+                                    ],
+                                    "shipToLocations": [
+                                        "AU",
+                                        "Americas",
+                                        "Europe",
+                                        "Asia"
+                                    ]
+                                }
+                            ],
+                            "sellingStatus": [
+                                {
+                                    "currentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "94.98"
+                                        }
+                                    ],
+                                    "convertedCurrentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "94.98"
+                                        }
+                                    ],
+                                    "bidCount": [
+                                        "0"
+                                    ],
+                                    "sellingState": [
+                                        "Active"
+                                    ],
+                                    "timeLeft": [
+                                        "P0DT0H3M23S"
+                                    ]
+                                }
+                            ],
+                            "listingInfo": [
+                                {
+                                    "bestOfferEnabled": [
+                                        "false"
+                                    ],
+                                    "buyItNowAvailable": [
+                                        "false"
+                                    ],
+                                    "startTime": [
+                                        "2010-09-26T19:17:03.000Z"
+                                    ],
+                                    "endTime": [
+                                        "2010-10-01T19:17:03.000Z"
+                                    ],
+                                    "listingType": [
+                                        "Auction"
+                                    ],
+                                    "gift": [
+                                        "false"
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "conditionId": [
+                                        "1000"
+                                    ],
+                                    "conditionDisplayName": [
+                                        "New"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "paginationOutput": [
+                {
+                    "pageNumber": [
+                        "1"
+                    ],
+                    "entriesPerPage": [
+                        "2"
+                    ],
+                    "totalPages": [
+                        "14477"
+                    ],
+                    "totalEntries": [
+                        "28953"
+                    ]
+                }
+            ],
+            "itemSearchURL": [
+                "http:\/\/shop.ebay.com\/10181\/i.html?_ddo=1&_ipg=2&_pgn=1"
+            ]
+        }
+    ]
+}

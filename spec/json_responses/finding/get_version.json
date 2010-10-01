@@ -1,0 +1,12 @@
+{
+    "getVersionResponse": [
+        {
+            "version": [
+                "1.8.0"
+            ],
+            "timestamp": [
+                "2010-10-01T19:30:02.385Z"
+            ]
+        }
+    ]
+}

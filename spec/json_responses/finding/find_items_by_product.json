@@ -1,0 +1,280 @@
+{
+    "findItemsByProductResponse": [
+        {
+            "ack": [
+                "Success"
+            ],
+            "version": [
+                "1.7.0"
+            ],
+            "timestamp": [
+                "2010-10-01T19:19:18.009Z"
+            ],
+            "searchResult": [
+                {
+                    "@count": "2",
+                    "item": [
+                        {
+                            "itemId": [
+                                "110593418903"
+                            ],
+                            "title": [
+                                "The Little Mermaid (DVD, 2006, 2-Disc Platinum Edition)"
+                            ],
+                            "globalId": [
+                                "EBAY-US"
+                            ],
+                            "primaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "617"
+                                    ],
+                                    "categoryName": [
+                                        "DVD, HD DVD & Blu-ray"
+                                    ]
+                                }
+                            ],
+                            "galleryURL": [
+                                "http:\/\/thumbs4.ebaystatic.com\/pict\/1105934189038080_1.jpg"
+                            ],
+                            "viewItemURL": [
+                                "http:\/\/cgi.ebay.com\/Little-Mermaid-DVD-2006-2-Disc-Platinum-Edition-\/110593418903?pt=US_DVD_HD_DVD_Blu_ray"
+                            ],
+                            "productId": [
+                                {
+                                    "@type": "ReferenceID",
+                                    "__value__": "53039031"
+                                }
+                            ],
+                            "paymentMethod": [
+                                "PayPal"
+                            ],
+                            "autoPay": [
+                                "false"
+                            ],
+                            "postalCode": [
+                                "33145"
+                            ],
+                            "location": [
+                                "Miami,FL,USA"
+                            ],
+                            "country": [
+                                "US"
+                            ],
+                            "shippingInfo": [
+                                {
+                                    "shippingServiceCost": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "0.0"
+                                        }
+                                    ],
+                                    "shippingType": [
+                                        "Free"
+                                    ],
+                                    "shipToLocations": [
+                                        "US"
+                                    ]
+                                }
+                            ],
+                            "sellingStatus": [
+                                {
+                                    "currentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "12.99"
+                                        }
+                                    ],
+                                    "convertedCurrentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "12.99"
+                                        }
+                                    ],
+                                    "sellingState": [
+                                        "Active"
+                                    ],
+                                    "timeLeft": [
+                                        "P6DT23H41M40S"
+                                    ]
+                                }
+                            ],
+                            "listingInfo": [
+                                {
+                                    "bestOfferEnabled": [
+                                        "false"
+                                    ],
+                                    "buyItNowAvailable": [
+                                        "false"
+                                    ],
+                                    "startTime": [
+                                        "2010-10-01T19:00:57.000Z"
+                                    ],
+                                    "endTime": [
+                                        "2010-10-08T19:00:57.000Z"
+                                    ],
+                                    "listingType": [
+                                        "FixedPrice"
+                                    ],
+                                    "gift": [
+                                        "false"
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "conditionId": [
+                                        "1000"
+                                    ],
+                                    "conditionDisplayName": [
+                                        "Brand New"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "itemId": [
+                                "250705027264"
+                            ],
+                            "title": [
+                                "The Little Mermaid (DVD, 2006, 2-Disc Platinum Edition)"
+                            ],
+                            "globalId": [
+                                "EBAY-US"
+                            ],
+                            "subtitle": [
+                                "Excellent Condition, 2 Disc dvd, Fast Shipping !! "
+                            ],
+                            "primaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "617"
+                                    ],
+                                    "categoryName": [
+                                        "DVD, HD DVD & Blu-ray"
+                                    ]
+                                }
+                            ],
+                            "galleryURL": [
+                                "http:\/\/thumbs1.ebaystatic.com\/pict\/2507050272648080_1.jpg"
+                            ],
+                            "viewItemURL": [
+                                "http:\/\/cgi.ebay.com\/Little-Mermaid-DVD-2006-2-Disc-Platinum-Edition-\/250705027264?pt=US_DVD_HD_DVD_Blu_ray"
+                            ],
+                            "productId": [
+                                {
+                                    "@type": "ReferenceID",
+                                    "__value__": "53039031"
+                                }
+                            ],
+                            "paymentMethod": [
+                                "PayPal"
+                            ],
+                            "autoPay": [
+                                "false"
+                            ],
+                            "location": [
+                                "USA"
+                            ],
+                            "country": [
+                                "US"
+                            ],
+                            "shippingInfo": [
+                                {
+                                    "shippingServiceCost": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "0.0"
+                                        }
+                                    ],
+                                    "shippingType": [
+                                        "Free"
+                                    ],
+                                    "shipToLocations": [
+                                        "Worldwide"
+                                    ]
+                                }
+                            ],
+                            "sellingStatus": [
+                                {
+                                    "currentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "0.99"
+                                        }
+                                    ],
+                                    "convertedCurrentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "0.99"
+                                        }
+                                    ],
+                                    "bidCount": [
+                                        "1"
+                                    ],
+                                    "sellingState": [
+                                        "Active"
+                                    ],
+                                    "timeLeft": [
+                                        "P0DT23H11M28S"
+                                    ]
+                                }
+                            ],
+                            "listingInfo": [
+                                {
+                                    "bestOfferEnabled": [
+                                        "false"
+                                    ],
+                                    "buyItNowAvailable": [
+                                        "false"
+                                    ],
+                                    "startTime": [
+                                        "2010-10-01T18:30:45.000Z"
+                                    ],
+                                    "endTime": [
+                                        "2010-10-02T18:30:45.000Z"
+                                    ],
+                                    "listingType": [
+                                        "Auction"
+                                    ],
+                                    "gift": [
+                                        "false"
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "conditionId": [
+                                        "3000"
+                                    ],
+                                    "conditionDisplayName": [
+                                        "Like New"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "paginationOutput": [
+                {
+                    "pageNumber": [
+                        "1"
+                    ],
+                    "entriesPerPage": [
+                        "2"
+                    ],
+                    "totalPages": [
+                        "65"
+                    ],
+                    "totalEntries": [
+                        "129"
+                    ]
+                }
+            ],
+            "itemSearchURL": [
+                "http:\/\/catalog.ebay.com\/53039031?_ddo=1&_ipg=2&_pgn=1"
+            ]
+        }
+    ]
+}

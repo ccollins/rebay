@@ -19,6 +19,9 @@ module Rebay
       raise ArgumentError unless params[:categoryId]
       response = get_json_response(build_request_url('findItemsByCategory', params))
       response.trim(:findItemsByCategoryResponse)
+      if response.response.has_key?('searchResult') && response.response['searchResult'].has_key?('item')
+        response.results = response.response['searchResult']['item']
+      end
       return response
     end
   
@@ -27,6 +30,9 @@ module Rebay
       raise ArgumentError unless params[:keywords]
       response = get_json_response(build_request_url('findItemsByKeywords', params))
       response.trim(:findItemsByKeywordsResponse)
+      if response.response.has_key?('searchResult') && response.response['searchResult'].has_key?('item')
+        response.results = response.response['searchResult']['item']
+      end
       return response
     end
   
@@ -36,6 +42,9 @@ module Rebay
       params['productId.@type'] = 'ReferenceID'
       response = get_json_response(build_request_url('findItemsByProduct', params))
       response.trim(:findItemsByProductResponse)
+      if response.response.has_key?('searchResult') && response.response['searchResult'].has_key?('item')
+        response.results = response.response['searchResult']['item']
+      end
       return response
     end
   
@@ -44,6 +53,9 @@ module Rebay
       raise ArgumentError unless params[:keywords] or params[:storeName]
       response = get_json_response(build_request_url('findItemsIneBayStores', params))
       response.trim(:findItemsIneBayStoresResponse)
+      if response.response.has_key?('searchResult') && response.response['searchResult'].has_key?('item')
+        response.results = response.response['searchResult']['item']
+      end
       return response
     end
   
@@ -60,12 +72,20 @@ module Rebay
       raise ArgumentError unless params[:keywords]
       response = get_json_response(build_request_url('getSearchKeywordsRecommendation', params))
       response.trim(:getSearchKeywordsRecommendationResponse)
+      if response.response.has_key?('keywords')
+        response.results = response.response['keywords']
+      end
       return response
     end
   
     #http://developer.ebay.com/DevZone/finding/CallRef/getVersion.html
     def get_version
       response = get_json_response(build_request_url('getVersion'))
+      response.trim(:getVersionResponse)
+      if response.response.has_key?('version')
+        response.results = response.response['version']
+      end
+      return response
     end
     
     private    

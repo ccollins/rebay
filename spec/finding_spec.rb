@@ -61,6 +61,16 @@ module Rebay
       it "should succeed" do
         @finder.find_items_advanced({:keywords => 'feist'}).success?.should be_true
       end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/find_items_advanced.json"))
+        @finder.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @finder.find_items_advanced({:keywords => 'whatevs'})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(2)
+      end
     end
     
     context "when calling find_items_by_category" do     
@@ -74,6 +84,16 @@ module Rebay
       
       it "should succeed" do
         @finder.find_items_by_category({:categoryId => 1}).success?.should be_true
+      end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/find_items_by_category.json"))
+        @finder.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @finder.find_items_by_category({:categoryId => 1})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(2)
       end
     end
     
@@ -89,6 +109,16 @@ module Rebay
       it "should succeed" do
         @finder.find_items_by_product({:productId => 53039031}).success?.should be_true
       end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/find_items_by_product.json"))
+        @finder.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @finder.find_items_by_product({:productId => 1})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(2)
+      end
     end
   
     context "when calling find_items_by_keywords" do     
@@ -102,6 +132,16 @@ module Rebay
       
       it "should succeed" do
         @finder.find_items_by_keywords({:keywords => 'feist'}).success?.should be_true
+      end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/find_items_by_keywords.json"))
+        @finder.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @finder.find_items_by_keywords({:keywords => 'whatevs'})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(2)
       end
     end
     
@@ -149,6 +189,18 @@ module Rebay
       it "should succeed" do
         @finder.get_search_keywords_recommendation({:keywords => 'feist'}).success?.should be_true
       end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/get_search_keywords_recommendation.json"))
+        @finder.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @finder.get_search_keywords_recommendation({:keywords => 'whatevs'})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(1)
+        
+        response.results.should eq('harry potter phoenix')
+      end
     end
     
     context "when calling get_version" do
@@ -158,6 +210,18 @@ module Rebay
       
       it "should succeed" do
         @finder.get_version.success?.should be_true
+      end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/get_version.json"))
+        @finder.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @finder.get_version
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(1)
+        
+        response.results.should eq('1.8.0')
       end
     end
   end

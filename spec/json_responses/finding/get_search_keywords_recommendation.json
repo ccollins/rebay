@@ -1,0 +1,18 @@
+{
+    "getSearchKeywordsRecommendationResponse": [
+        {
+            "ack": [
+                "Success"
+            ],
+            "version": [
+                "1.7.0"
+            ],
+            "timestamp": [
+                "2010-10-01T19:26:27.007Z"
+            ],
+            "keywords": [
+                "harry potter phoenix"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,280 @@
+{
+    "findItemsByKeywordsResponse": [
+        {
+            "ack": [
+                "Success"
+            ],
+            "version": [
+                "1.7.0"
+            ],
+            "timestamp": [
+                "2010-10-01T19:17:04.303Z"
+            ],
+            "searchResult": [
+                {
+                    "@count": "2",
+                    "item": [
+                        {
+                            "itemId": [
+                                "290480566414"
+                            ],
+                            "title": [
+                                "Harry Potter and the Order of the Phoenix 1 DVD 99 CENT"
+                            ],
+                            "globalId": [
+                                "EBAY-US"
+                            ],
+                            "primaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "617"
+                                    ],
+                                    "categoryName": [
+                                        "DVD, HD DVD & Blu-ray"
+                                    ]
+                                }
+                            ],
+                            "galleryURL": [
+                                "http:\/\/thumbs3.ebaystatic.com\/pict\/2904805664148080_2.jpg"
+                            ],
+                            "viewItemURL": [
+                                "http:\/\/cgi.ebay.com\/Harry-Potter-and-Order-Phoenix-1-DVD-99-CENT-\/290480566414?pt=US_DVD_HD_DVD_Blu_ray"
+                            ],
+                            "productId": [
+                                {
+                                    "@type": "ReferenceID",
+                                    "__value__": "62923188"
+                                }
+                            ],
+                            "paymentMethod": [
+                                "PayPal"
+                            ],
+                            "autoPay": [
+                                "false"
+                            ],
+                            "postalCode": [
+                                "43130"
+                            ],
+                            "location": [
+                                "Lancaster,OH,USA"
+                            ],
+                            "country": [
+                                "US"
+                            ],
+                            "shippingInfo": [
+                                {
+                                    "shippingType": [
+                                        "CalculatedDomesticFlatInternational"
+                                    ],
+                                    "shipToLocations": [
+                                        "Worldwide"
+                                    ]
+                                }
+                            ],
+                            "sellingStatus": [
+                                {
+                                    "currentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "0.01"
+                                        }
+                                    ],
+                                    "convertedCurrentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "0.01"
+                                        }
+                                    ],
+                                    "bidCount": [
+                                        "1"
+                                    ],
+                                    "sellingState": [
+                                        "Active"
+                                    ],
+                                    "timeLeft": [
+                                        "P0DT0H29M46S"
+                                    ]
+                                }
+                            ],
+                            "listingInfo": [
+                                {
+                                    "bestOfferEnabled": [
+                                        "false"
+                                    ],
+                                    "buyItNowAvailable": [
+                                        "false"
+                                    ],
+                                    "startTime": [
+                                        "2010-09-26T19:46:50.000Z"
+                                    ],
+                                    "endTime": [
+                                        "2010-10-01T19:46:50.000Z"
+                                    ],
+                                    "listingType": [
+                                        "Auction"
+                                    ],
+                                    "gift": [
+                                        "false"
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "conditionId": [
+                                        "5000"
+                                    ],
+                                    "conditionDisplayName": [
+                                        "Good"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "itemId": [
+                                "320595045661"
+                            ],
+                            "title": [
+                                "Harry Potter and the Order of the Phoenix by J. K. R..."
+                            ],
+                            "globalId": [
+                                "EBAY-US"
+                            ],
+                            "subtitle": [
+                                "Like Brand New"
+                            ],
+                            "primaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "29792"
+                                    ],
+                                    "categoryName": [
+                                        "Audiobooks"
+                                    ]
+                                }
+                            ],
+                            "galleryURL": [
+                                "http:\/\/thumbs2.ebaystatic.com\/pict\/3205950456618080_1.jpg"
+                            ],
+                            "viewItemURL": [
+                                "http:\/\/cgi.ebay.com\/Harry-Potter-and-Order-Phoenix-J-K-R-\/320595045661?pt=US_Audiobooks"
+                            ],
+                            "productId": [
+                                {
+                                    "@type": "ReferenceID",
+                                    "__value__": "2371690"
+                                }
+                            ],
+                            "paymentMethod": [
+                                "PayPal"
+                            ],
+                            "autoPay": [
+                                "false"
+                            ],
+                            "postalCode": [
+                                "49855"
+                            ],
+                            "location": [
+                                "Marquette,MI,USA"
+                            ],
+                            "country": [
+                                "US"
+                            ],
+                            "shippingInfo": [
+                                {
+                                    "shippingServiceCost": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "2.95"
+                                        }
+                                    ],
+                                    "shippingType": [
+                                        "Flat"
+                                    ],
+                                    "shipToLocations": [
+                                        "US"
+                                    ]
+                                }
+                            ],
+                            "sellingStatus": [
+                                {
+                                    "currentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "35.0"
+                                        }
+                                    ],
+                                    "convertedCurrentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "35.0"
+                                        }
+                                    ],
+                                    "bidCount": [
+                                        "0"
+                                    ],
+                                    "sellingState": [
+                                        "Active"
+                                    ],
+                                    "timeLeft": [
+                                        "P0DT0H31M14S"
+                                    ]
+                                }
+                            ],
+                            "listingInfo": [
+                                {
+                                    "bestOfferEnabled": [
+                                        "false"
+                                    ],
+                                    "buyItNowAvailable": [
+                                        "false"
+                                    ],
+                                    "startTime": [
+                                        "2010-09-24T19:48:18.000Z"
+                                    ],
+                                    "endTime": [
+                                        "2010-10-01T19:48:18.000Z"
+                                    ],
+                                    "listingType": [
+                                        "Auction"
+                                    ],
+                                    "gift": [
+                                        "false"
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "conditionId": [
+                                        "3000"
+                                    ],
+                                    "conditionDisplayName": [
+                                        "Like New"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "paginationOutput": [
+                {
+                    "pageNumber": [
+                        "1"
+                    ],
+                    "entriesPerPage": [
+                        "2"
+                    ],
+                    "totalPages": [
+                        "1184"
+                    ],
+                    "totalEntries": [
+                        "2368"
+                    ]
+                }
+            ],
+            "itemSearchURL": [
+                "http:\/\/shop.ebay.com\/i.html?_nkw=harry+potter+phoenix&_ddo=1&_ipg=2&_pgn=1"
+            ]
+        }
+    ]
+}
