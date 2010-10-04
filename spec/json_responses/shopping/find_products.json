@@ -1,0 +1,88 @@
+{
+    "Timestamp": "2010-10-01T19:34:55.001Z",
+    "Ack": "Success",
+    "Build": "E687_CORE_BUNDLED_12036931_R1",
+    "Version": "687",
+    "ApproximatePages": 456,
+    "MoreResults": true,
+    "PageNumber": 1,
+    "Product": [
+        {
+            "DomainName": "Children's & Young Adult Books",
+            "DetailsURL": "http://syicatalogs.ebay.com/ws/eBayISAPI.dll?PageSyiProductDetails&IncludeAttributes=1&ShowAttributesTable=1&ProductMementoString=108476:2:1055:1565202560:280175960:0dc69db1390e7698d8d7b8bac4239903:1:1:1:1378670148",
+            "DisplayStockPhotos": true,
+            "ProductID": [
+                {
+                    "Value": "59049480",
+                    "Type": "Reference"
+                },
+                {
+                    "Value": "0545010225",
+                    "Type": "ISBN"
+                },
+                {
+                    "Value": "9780545010221",
+                    "Type": "ISBN"
+                }
+            ],
+            "ItemSpecifics": {
+                "NameValueList": [
+                    {
+                        "Name": "Author",
+                        "Value": [
+                            "J. K. Rowling"
+                        ]
+                    },
+                    {
+                        "Name": "Binding",
+                        "Value": [
+                            "Hardcover"
+                        ]
+                    }
+                ]
+            },
+            "ReviewCount": 429,
+            "StockPhotoURL": "http://i.ebayimg.com/22/!!d642Ug!2M~$(KGrHqEH-C0EvDJMtMuVBLzFHQfsjg~~_6.JPG?set_id=89040003C1",
+            "Title": "Harry Potter and the Deathly Hallows by J. K. Rowling (2007, Hardcover)"
+        },
+        {
+            "DomainName": "Children's & Young Adult Books",
+            "DetailsURL": "http://syicatalogs.ebay.com/ws/eBayISAPI.dll?PageSyiProductDetails&IncludeAttributes=1&ShowAttributesTable=1&ProductMementoString=108476:2:1055:2538005280:282852980:58d4535978eda97ef4d4f72f9000b7ae:1:1:1:1278992857",
+            "DisplayStockPhotos": true,
+            "ProductID": [
+                {
+                    "Value": "44462740",
+                    "Type": "Reference"
+                },
+                {
+                    "Value": "0439784549",
+                    "Type": "ISBN"
+                },
+                {
+                    "Value": "9780439784542",
+                    "Type": "ISBN"
+                }
+            ],
+            "ItemSpecifics": {
+                "NameValueList": [
+                    {
+                        "Name": "Author",
+                        "Value": [
+                            "J. K. Rowling"
+                        ]
+                    },
+                    {
+                        "Name": "Binding",
+                        "Value": [
+                            "Hardcover"
+                        ]
+                    }
+                ]
+            },
+            "ReviewCount": 300,
+            "StockPhotoURL": "http://i11.ebayimg.com/03/c/03/c3/c8/33_6.JPG?set_id=81040003C1",
+            "Title": "Harry Potter and the Half-blood Prince by J. K. Rowling (2005, Hardcover)"
+        }
+    ],
+    "TotalProducts": 911
+}

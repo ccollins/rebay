@@ -77,6 +77,16 @@ module Rebay
       it "should succeed" do
         @shopper.get_category_info({:categoryId => 29223}).success?.should be_true
       end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/get_category_info.json"))
+        @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @shopper.get_category_info({:categoryId => 1})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(1)
+      end
     end
     
     context "when calling find_products" do      
@@ -91,6 +101,16 @@ module Rebay
       it "should succeed" do
         @shopper.find_products({:queryKeywords => 'harry potter'}).success?.should be_true
       end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/find_products.json"))
+        @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @shopper.find_products({:queryKeywords => 'whatevs'})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(2)
+      end
     end
     
     context "when calling find_half_products" do     
@@ -104,6 +124,16 @@ module Rebay
       
       it "should succeed" do
         @shopper.find_half_products({:queryKeywords => 'harry potter'}).success?.should be_true
+      end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/find_half_products.json"))
+        @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @shopper.find_half_products({:queryKeywords => 'whatevs'})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(2)
       end
     end
     
@@ -189,6 +219,16 @@ module Rebay
       it "should succeed" do
         @shopper.find_popular_searches({:categoryId => 1}).success?.should be_true
       end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/find_popular_searches.json"))
+        @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @shopper.find_popular_searches({:categoryId => 1})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(1)
+      end
     end
     
     context "when calling find_popular_items" do    
@@ -199,6 +239,16 @@ module Rebay
       it "should succeed" do
         @shopper.find_popular_items({:categoryId => 1}).success?.should be_true
       end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/find_popular_items.json"))
+        @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @shopper.find_popular_items({:categoryId => 1})
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(19)
+      end
     end
     
     context "when calling find_reviews_and_guides" do      
@@ -208,6 +258,16 @@ module Rebay
       
       it "should succeed" do
         @shopper.find_reviews_and_guides.success?.should be_true
+      end
+      
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/find_reviews_and_guides.json"))
+        @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @shopper.find_reviews_and_guides
+        
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(5)
       end
     end
   end

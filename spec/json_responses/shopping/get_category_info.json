@@ -1,0 +1,22 @@
+{
+    "Timestamp": "2010-10-04T21:12:32.436Z",
+    "Ack": "Success",
+    "Build": "E689_CORE_BUNDLED_12146986_R1",
+    "Version": "689",
+    "CategoryArray": {
+        "Category": [
+            {
+                "CategoryID": "279",
+                "CategoryLevel": 2,
+                "CategoryName": "Children & Young Adults",
+                "CategoryParentID": "267",
+                "CategoryNamePath": "Books:Children & Young Adults",
+                "CategoryIDPath": "267:279",
+                "LeafCategory": true
+            }
+        ]
+    },
+    "CategoryCount": 1,
+    "UpdateTime": "2010-09-13T01:43:10.000Z",
+    "CategoryVersion": "96"
+}
