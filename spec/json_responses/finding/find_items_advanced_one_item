@@ -1,0 +1,152 @@
+{
+    "findItemsAdvancedResponse": [
+        {
+            "ack": [
+                "Success"
+            ],
+            "version": [
+                "1.8.0"
+            ],
+            "timestamp": [
+                "2010-11-05T22:12:41.126Z"
+            ],
+            "searchResult": [
+                {
+                    "@count": "1",
+                    "item": [
+                        {
+                            "itemId": [
+                                "330459173682"
+                            ],
+                            "title": [
+                                "zebra 12 18 24 3 3t outfit dress TUTU BIRTHDAY girls"
+                            ],
+                            "globalId": [
+                                "EBAY-US"
+                            ],
+                            "primaryCategory": [
+                                {
+                                    "categoryId": [
+                                        "10160"
+                                    ],
+                                    "categoryName": [
+                                        "Disney"
+                                    ]
+                                }
+                            ],
+                            "galleryURL": [
+                                "http:\/\/thumbs3.ebaystatic.com\/pict\/3304591736828080_2.jpg"
+                            ],
+                            "viewItemURL": [
+                                "http:\/\/cgi.ebay.com\/zebra-12-18-24-3-3t-outfit-dress-TUTU-BIRTHDAY-girls-\/330459173682?pt=LH_DefaultDomain_0"
+                            ],
+                            "paymentMethod": [
+                                "PayPal"
+                            ],
+                            "autoPay": [
+                                "false"
+                            ],
+                            "location": [
+                                "USA"
+                            ],
+                            "country": [
+                                "US"
+                            ],
+                            "shippingInfo": [
+                                {
+                                    "shippingServiceCost": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "6.95"
+                                        }
+                                    ],
+                                    "shippingType": [
+                                        "Flat"
+                                    ],
+                                    "shipToLocations": [
+                                        "US"
+                                    ],
+                                    "expeditedShipping": [
+                                        "false"
+                                    ],
+                                    "oneDayShippingAvailable": [
+                                        "false"
+                                    ],
+                                    "handlingTime": [
+                                        "5"
+                                    ]
+                                }
+                            ],
+                            "sellingStatus": [
+                                {
+                                    "currentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "29.99"
+                                        }
+                                    ],
+                                    "convertedCurrentPrice": [
+                                        {
+                                            "@currencyId": "USD",
+                                            "__value__": "29.99"
+                                        }
+                                    ],
+                                    "sellingState": [
+                                        "Active"
+                                    ],
+                                    "timeLeft": [
+                                        "P1DT1H31M46S"
+                                    ]
+                                }
+                            ],
+                            "listingInfo": [
+                                {
+                                    "bestOfferEnabled": [
+                                        "false"
+                                    ],
+                                    "buyItNowAvailable": [
+                                        "false"
+                                    ],
+                                    "startTime": [
+                                        "2010-08-08T23:39:27.000Z"
+                                    ],
+                                    "endTime": [
+                                        "2010-11-06T23:44:27.000Z"
+                                    ],
+                                    "listingType": [
+                                        "StoreInventory"
+                                    ],
+                                    "gift": [
+                                        "false"
+                                    ]
+                                }
+                            ],
+                            "returnsAccepted": [
+                                "false"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "paginationOutput": [
+                {
+                    "pageNumber": [
+                        "1"
+                    ],
+                    "entriesPerPage": [
+                        "100"
+                    ],
+                    "totalPages": [
+                        "1"
+                    ],
+                    "totalEntries": [
+                        "1"
+                    ]
+                }
+            ],
+            "itemSearchURL": [
+                "http:\/\/shop.ebay.com\/10159\/i.html?_ddo=1&_ipg=100&_pgn=1"
+            ]
+        }
+    ]
+}

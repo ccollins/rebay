@@ -31,6 +31,16 @@ module Rebay
       end
     end
     
+    def size
+      if @results.nil?
+        return 0
+      elsif @results.class == Array
+        return @results.size
+      else
+        return 1
+      end
+    end
+    
     protected
     def transform_json_response(response)    
       if response.class == Hash

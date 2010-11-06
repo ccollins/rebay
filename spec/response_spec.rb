@@ -4,14 +4,14 @@ module Rebay
   describe Response do
     context "on creation" do
       it "should transform the happy json" do
-        json_happy = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/get_search_keywords_recommendation_happy.json"))
+        json_happy = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/get_search_keywords_recommendation_happy"))
         response = Response.new(json_happy)
         response.response.should eq({"getSearchKeywordsRecommendationResponse" => {"ack" => "Success", "version" => "1.5.0", 
                                                                                   "timestamp" => "2010-08-13T21:11:02.539Z", "keywords" => "accordion"}})
       end
       
       it "should transform the sad json" do
-        json_sad = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/get_search_keywords_recommendation_sad.json"))
+        json_sad = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/get_search_keywords_recommendation_sad"))
         response = Response.new(json_sad)
         response.response.should eq({"getSearchKeywordsRecommendationResponse" =>
                         {"ack" => "Warning",
@@ -68,7 +68,7 @@ module Rebay
     
     context "using find items advanced json" do
       before(:each) do
-        @json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/find_items_advanced.json"))
+        @json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/find_items_advanced"))
         @response = Response.new(@json)
         @response.trim(:findItemsAdvancedResponse)
         @proper = {"ack"=>"Success", "version"=>"1.7.0", "timestamp"=>"2010-09-29T01:53:58.039Z",
@@ -110,6 +110,10 @@ module Rebay
       
       it "should trim format response correctly" do
         @response.response.should eq(@proper)
+      end
+      
+      it "should show correct size" do
+        @response.size.should eq(2)
       end
     end
   end
