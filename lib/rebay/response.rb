@@ -16,9 +16,13 @@ module Rebay
     end
     
     def trim(key)
-      if @response.has_key?(key.to_s)
-        @response = @response[key.to_s]
+      if @response.has_key?(key)
+        @response = @response[key]
       end
+    end
+    
+    def has_key?(key)
+      @response.has_key?(key)
     end
     
     def each

@@ -116,7 +116,7 @@ module Rebay
     end 
     
     private
-    def build_request_url(service, params=nil)
+    def build_request_url(service, params={})
       url = "#{BASE_URL}?callname=#{service}&appid=#{Rebay::Api.app_id}&version=#{VERSION}&responseencoding=JSON&siteid=#{Rebay::Api::EBAY_US}"
       url += build_rest_payload(params)
       return url

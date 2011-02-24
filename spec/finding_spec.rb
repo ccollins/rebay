@@ -46,10 +46,6 @@ module Rebay
     end
     
     context "when calling find_items_advanced" do     
-      it "should fail without args" do
-        lambda { @finder.find_items_advanced }.should raise_error(ArgumentError)
-      end
-      
       it "should return a hash response with categoryId as parameter" do
         @finder.find_items_advanced({:categoryId => 1}).class.should eq(Rebay::Response)
       end
@@ -84,10 +80,6 @@ module Rebay
     end
     
     context "when calling find_items_by_category" do     
-      it "should fail without args" do
-        lambda { @finder.get_search_keywords_recommendation }.should raise_error(ArgumentError)
-      end
-      
       it "should return a hash response" do
         @finder.find_items_by_category({:categoryId => 1}).class.should eq(Rebay::Response)
       end
@@ -107,11 +99,7 @@ module Rebay
       end
     end
     
-    context "when calling find_items_by_product" do    
-      it "should fail without args" do
-        lambda { @finder.find_items_by_product }.should raise_error(ArgumentError)
-      end
-      
+    context "when calling find_items_by_product" do          
       it "should return a hash response" do
         @finder.find_items_by_product({:productId => 53039031}).class.should eq(Rebay::Response)
       end
@@ -132,10 +120,6 @@ module Rebay
     end
   
     context "when calling find_items_by_keywords" do     
-      it "should fail without args" do
-        lambda { @finder.find_items_by_keywords }.should raise_error(ArgumentError)
-      end
-      
       it "should return a hash response" do
         @finder.find_items_by_keywords({:keywords => 'feist'}).class.should eq(Rebay::Response)
       end
@@ -155,11 +139,7 @@ module Rebay
       end
     end
     
-    context "when calling find_items_in_ebay_stores" do
-      it "should fail without args" do
-        lambda { @finder.find_items_in_ebay_stores }.should raise_error(ArgumentError)
-      end
-      
+    context "when calling find_items_in_ebay_stores" do      
       it "should return a hash response with storeName as parameter" do
         @finder.find_items_in_ebay_stores({:storeName => 'Laura_Chen\'s_Small_Store'}).class.should eq(Rebay::Response)
       end
@@ -174,10 +154,6 @@ module Rebay
     end
     
     context "when calling get_histograms" do
-      it "should fail without args" do
-        lambda { @finder.get_histograms }.should raise_error(ArgumentError)
-      end
-      
       it "should return a hash response" do
         @finder.get_histograms({:categoryId => 1}).class.should eq(Rebay::Response)
       end
@@ -187,11 +163,7 @@ module Rebay
       end
     end
     
-    context "when calling get_search_keywords_recommendation" do
-      it "should fail without args" do
-        lambda { @finder.get_search_keywords_recommendation }.should raise_error(ArgumentError)
-      end
-      
+    context "when calling get_search_keywords_recommendation" do    
       it "should return a hash response" do
         @finder.get_search_keywords_recommendation({:keywords => 'feist'}).class.should eq(Rebay::Response)
       end
