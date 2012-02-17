@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
      "README.md",
      "Rakefile",
      "VERSION",
-     "config.rb",
      "init.rb",
      "lib/rebay.rb",
      "lib/rebay/api.rb",
