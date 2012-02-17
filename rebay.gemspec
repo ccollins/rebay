@@ -20,12 +20,10 @@ Gem::Specification.new do |s|
      "README.md",
      "Rakefile",
      "VERSION",
-     "config.rb",
      "init.rb",
      "lib/rebay.rb",
      "lib/rebay/api.rb",
      "lib/rebay/finding.rb",
-     "lib/rebay/railtie.rb",
      "lib/rebay/response.rb",
      "lib/rebay/shopping.rb",
      "rebay.gemspec"
