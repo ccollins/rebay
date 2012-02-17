@@ -8,11 +8,11 @@ module Rebay
     end
     
     def success?
-      return @response["Ack"] == 'Success'
+      @response["Ack"] == 'Success' || @response['ack'] == 'Success'
     end
     
     def failure?
-      return @response["Ack"] == 'Failure'
+      @response["Ack"] == 'Failure' || @response['ack'] == 'Failure'
     end
     
     def trim(key)
