@@ -12,7 +12,7 @@ module Rebay
     
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindProducts.html
     def find_products(params)
-      raise ArgumentError unless params[:categoryId] or params["productID.Value"] or params[:productId] or params[:queryKeywords]
+      raise ArgumentError unless params[:categoryId] or params["ProductID.Value"] or params[:productId] or params[:queryKeywords]
       response = get_json_response(build_request_url('FindProducts', params))
       if response.response.has_key?('Product')
         response.results = response.response['Product']
@@ -22,7 +22,7 @@ module Rebay
     
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindHalfProducts.html
     def find_half_products(params)
-      raise ArgumentError unless params["productID.Value"] or params[:productId] or params[:queryKeywords]
+      raise ArgumentError unless params["ProductID.Value"] or params[:productId] or params[:queryKeywords]
       response = get_json_response(build_request_url('FindHalfProducts', params))
       if response.response.has_key?('Products') && response.response['Products'].has_key?('Product')
         response.results = response.response['Products']['Product']
