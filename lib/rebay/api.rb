@@ -6,13 +6,18 @@ module Rebay
   class Api
     EBAY_US = 0
 
-    BASE_URL_PREFIX = "http://svcs"
-    BASE_URL_SUFFIX = "ebay.com"
-
     def self.base_url
-      [BASE_URL_PREFIX,
+      [base_url_prefix,
        sandbox ? "sandbox" : nil,
-       BASE_URL_SUFFIX].compact.join('.')
+       base_url_suffix].compact.join('.')
+    end
+
+    def self.base_url_prefix
+      "http://svcs"
+    end
+
+    def self.base_url_suffix
+      "ebay.com"
     end
     
     def self.app_id= app_id

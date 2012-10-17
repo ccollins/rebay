@@ -2,15 +2,15 @@ require File.dirname(__FILE__) + '/spec_helper'
 
 module Rebay
   describe Api do
-    describe Api::BASE_URL_PREFIX do
+    describe Api.base_url_prefix do
       it "shouldn't be nil" do
-        Rebay::Api::BASE_URL_PREFIX.should_not be_nil
+        Rebay::Api.base_url_prefix.should_not be_nil
       end
     end
 
-    describe Api::BASE_URL_SUFFIX do
+    describe Api.base_url_suffix do
       it "shouldn't be nil" do
-        Rebay::Api::BASE_URL_SUFFIX.should_not be_nil
+        Rebay::Api.base_url_suffix.should_not be_nil
       end
     end
 

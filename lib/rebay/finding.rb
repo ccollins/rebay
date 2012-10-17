@@ -1,7 +1,9 @@
 module Rebay
   class Finding < Rebay::Api
-    BASE_URL_PREFIX = 'http://svcs'
-    BASE_URL_SUFFIX = 'ebay.com/services/search/FindingService/v1'
+    def self.base_url_suffix
+      "ebay.com/services/search/FindingService/v1"
+    end
+    
     VERSION = '1.0.0'
     
     #http://developer.ebay.com/DevZone/finding/CallRef/findItemsAdvanced.html

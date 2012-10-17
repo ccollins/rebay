@@ -1,7 +1,13 @@
 module Rebay
   class Shopping < Rebay::Api
-    BASE_URL_PREFIX = "http://open.api"
-    BASE_URL_SUFFIX = "ebay.com/shopping"
+    def self.base_url_prefix
+      "http://open.api"
+    end
+    
+    def base_url_suffix
+      "ebay.com/shopping"
+    end
+    
     VERSION = '677'
     
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindProducts.html
