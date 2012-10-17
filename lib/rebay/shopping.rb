@@ -4,7 +4,7 @@ module Rebay
       "http://open.api"
     end
     
-    def base_url_suffix
+    def self.base_url_suffix
       "ebay.com/shopping"
     end
     
