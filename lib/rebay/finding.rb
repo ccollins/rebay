@@ -1,6 +1,7 @@
 module Rebay
   class Finding < Rebay::Api
-    BASE_URL = 'http://svcs.ebay.com/services/search/FindingService/v1'
+    BASE_URL_PREFIX = 'http://svcs'
+    BASE_URL_SUFFIX = 'ebay.com/services/search/FindingService/v1'
     VERSION = '1.0.0'
     
     #http://developer.ebay.com/DevZone/finding/CallRef/findItemsAdvanced.html
@@ -91,7 +92,7 @@ module Rebay
     
     private    
     def build_request_url(service, params=nil)
-      url = "#{BASE_URL}?OPERATION-NAME=#{service}&SERVICE-VERSION=#{VERSION}&SECURITY-APPNAME=#{Rebay::Api.app_id}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD"
+      url = "#{self.class.base_url}?OPERATION-NAME=#{service}&SERVICE-VERSION=#{VERSION}&SECURITY-APPNAME=#{Rebay::Api.app_id}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD"
       url += build_rest_payload(params)
       return url
     end
