@@ -71,17 +71,17 @@ module Rebay
       end
       
       it "should return a hash response" do
-        @shopper.get_category_info({:categoryId => 29223}).class.should eq(Rebay::Response)
+        @shopper.get_category_info({:CategoryID => 29223}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.get_category_info({:categoryId => 29223}).success?.should be_true
+        @shopper.get_category_info({:CategoryID => 29223}).success?.should be_true
       end
       
       it "should iterate over results" do
         json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/get_category_info"))
         @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
-        response = @shopper.get_category_info({:categoryId => 1})
+        response = @shopper.get_category_info({:CategoryID => 1})
         
         count = 0
         response.each { |r| count = count + 1 }
@@ -95,17 +95,17 @@ module Rebay
       end
       
       it "should return a hash response" do
-        @shopper.find_products({:queryKeywords => 'harry potter'}).class.should eq(Rebay::Response)
+        @shopper.find_products({:QueryKeywords => 'harry potter'}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.find_products({:queryKeywords => 'harry potter'}).success?.should be_true
+        @shopper.find_products({:QueryKeywords => 'harry potter'}).success?.should be_true
       end
       
       it "should iterate over results" do
         json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/find_products"))
         @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
-        response = @shopper.find_products({:queryKeywords => 'whatevs'})
+        response = @shopper.find_products({:QueryKeywords => 'whatevs'})
         
         count = 0
         response.each { |r| count = count + 1 }
@@ -119,17 +119,17 @@ module Rebay
       end
       
       it "should return a hash response" do
-        @shopper.find_half_products({:queryKeywords => 'harry potter'}).class.should eq(Rebay::Response)
+        @shopper.find_half_products({:QueryKeywords => 'harry potter'}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.find_half_products({:queryKeywords => 'harry potter'}).success?.should be_true
+        @shopper.find_half_products({:QueryKeywords => 'harry potter'}).success?.should be_true
       end
       
       it "should iterate over results" do
         json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/find_half_products"))
         @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
-        response = @shopper.find_half_products({:queryKeywords => 'whatevs'})
+        response = @shopper.find_half_products({:QueryKeywords => 'whatevs'})
         
         count = 0
         response.each { |r| count = count + 1 }
@@ -143,11 +143,11 @@ module Rebay
       end
       
       it "should return a hash response" do
-        @shopper.get_single_item({:itemId => 230139965209}).class.should eq(Rebay::Response)
+        @shopper.get_single_item({:ItemID => 230139965209}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.get_single_item({:itemId => 230139965209}).success?.should be_true
+        @shopper.get_single_item({:ItemID => 230139965209}).success?.should be_true
       end
     end
     
@@ -157,11 +157,11 @@ module Rebay
       end
       
       it "should return a hash response" do
-        @shopper.get_item_status({:itemId => 230139965209}).class.should eq(Rebay::Response)
+        @shopper.get_item_status({:ItemID => 230139965209}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.get_item_status({:itemId => 230139965209}).success?.should be_true
+        @shopper.get_item_status({:ItemID => 230139965209}).success?.should be_true
       end
     end
     
@@ -171,11 +171,11 @@ module Rebay
       end
       
       it "should return a hash response" do
-        @shopper.get_shipping_costs({:itemId => 230139965209}).class.should eq(Rebay::Response)
+        @shopper.get_shipping_costs({:ItemID => 230139965209}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.get_shipping_costs({:itemId => 230139965209}).success?.should be_true
+        @shopper.get_shipping_costs({:ItemID => 230139965209}).success?.should be_true
       end
     end
     
@@ -185,11 +185,11 @@ module Rebay
       end
       
       it "should return a hash response" do
-        @shopper.get_multiple_items({:itemId => 230139965209}).class.should eq(Rebay::Response)
+        @shopper.get_multiple_items({:ItemID => 230139965209}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.get_multiple_items({:itemId => 230139965209}).success?.should be_true
+        @shopper.get_multiple_items({:ItemID => 230139965209}).success?.should be_true
       end
     end
     
@@ -199,11 +199,11 @@ module Rebay
       end
       
       it "should return a hash response" do
-        @shopper.get_user_profile({:userId => 1}).class.should eq(Rebay::Response)
+        @shopper.get_user_profile({:UserID => 1}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.get_user_profile({:userId => 1}).success?.should be_true
+        @shopper.get_user_profile({:UserID => 1}).success?.should be_true
       end
     end
     
@@ -213,17 +213,17 @@ module Rebay
       end
       
       it "should return a hash response" do
-        @shopper.find_popular_searches({:categoryId => 1}).class.should eq(Rebay::Response)
+        @shopper.find_popular_searches({:CategoryID => 1}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.find_popular_searches({:categoryId => 1}).success?.should be_true
+        @shopper.find_popular_searches({:CategoryID => 1}).success?.should be_true
       end
       
       it "should iterate over results" do
         json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/find_popular_searches"))
         @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
-        response = @shopper.find_popular_searches({:categoryId => 1})
+        response = @shopper.find_popular_searches({:CategoryID => 1})
         
         count = 0
         response.each { |r| count = count + 1 }
@@ -233,17 +233,17 @@ module Rebay
     
     context "when calling find_popular_items" do    
       it "should return a hash response" do
-        @shopper.find_popular_items({:categoryId => 1}).class.should eq(Rebay::Response)
+        @shopper.find_popular_items({:CategoryID => 1}).class.should eq(Rebay::Response)
       end
       
       it "should succeed" do
-        @shopper.find_popular_items({:categoryId => 1}).success?.should be_true
+        @shopper.find_popular_items({:CategoryID => 1}).success?.should be_true
       end
       
       it "should iterate over results" do
         json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/shopping/find_popular_items"))
         @shopper.stub!(:get_json_response).and_return(Rebay::Response.new(json))
-        response = @shopper.find_popular_items({:categoryId => 1})
+        response = @shopper.find_popular_items({:CategoryID => 1})
         
         count = 0
         response.each { |r| count = count + 1 }
