@@ -5,13 +5,35 @@ require 'uri'
 module Rebay
   class Api
     EBAY_US = 0
-  
+
+    def self.base_url
+      [base_url_prefix,
+       sandbox ? "sandbox" : nil,
+       base_url_suffix].compact.join('.')
+    end
+
+    def self.base_url_prefix
+      "http://svcs"
+    end
+
+    def self.base_url_suffix
+      "ebay.com"
+    end
+    
     def self.app_id= app_id
       @@app_id = app_id
     end
     
     def self.app_id
       @@app_id
+    end
+
+    def self.sandbox= sandbox
+      @@sandbox = sandbox
+    end
+
+    def self.sandbox
+      @@sandbox ||= false
     end
       
     def self.configure
