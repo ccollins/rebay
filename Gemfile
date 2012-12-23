@@ -5,7 +5,5 @@ group :dependencies do
 end
   
 group :development do
-  gem 'rspec'
-  gem 'bundler', '>= 1.0.0'
-  gem 'jeweler', '>= 1.5.2'
+  gem 'rspec', '2.12'
 end
