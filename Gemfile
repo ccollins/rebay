@@ -5,5 +5,5 @@ group :dependencies do
 end
   
 group :development do
-  gem 'rspec', '2.12'
+  gem 'rspec'
 end

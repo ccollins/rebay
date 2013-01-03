@@ -17,4 +17,4 @@ PLATFORMS
 
 DEPENDENCIES
   json
-  rspec (= 2.12)
+  rspec

@@ -1,11 +1,21 @@
 module Rebay
   class Shopping < Rebay::Api
-    BASE_URL = 'http://open.api.ebay.com/shopping'
-    VERSION = '677'
-
+    VERSION = '793'
+    
+    class << self
+      def base_url_prefix
+        "http://open.api"
+      end
+    
+      def base_url_suffix
+        "ebay.com/shopping"
+      end
+    end
+    
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindProducts.html
     def find_products(params)
-      raise ArgumentError unless params[:categoryId] or params[:productId] or params[:queryKeywords]
+      raise ArgumentError unless params[:CategoryID] or params[:ProductID] or params[:QueryKeywords] or
+        (params[:'ProductID.Value'] && params[:'ProductID.type'])
       response = get_json_response(build_request_url('FindProducts', params))
       if response.response.has_key?('Product')
         response.results = response.response['Product']
@@ -15,7 +25,8 @@ module Rebay
 
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindHalfProducts.html
     def find_half_products(params)
-      raise ArgumentError unless params[:productId] or params[:queryKeywords]
+      raise ArgumentError unless params[:ProductID] or params[:QueryKeywords] or
+        (params[:'ProductID.Value'] && params[:'ProductID.type'])
       response = get_json_response(build_request_url('FindHalfProducts', params))
       if response.response.has_key?('Products') && response.response['Products'].has_key?('Product')
         response.results = response.response['Products']['Product']
@@ -25,7 +36,7 @@ module Rebay
 
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetSingleItem.html
     def get_single_item(params)
-      raise ArgumentError unless params[:itemId]
+      raise ArgumentError unless params[:ItemID]
       response = get_json_response(build_request_url('GetSingleItem', params))
       if response.response.has_key?('Item')
         response.results = response.response['Item']
@@ -35,7 +46,7 @@ module Rebay
 
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetItemStatus.html
     def get_item_status(params)
-      raise ArgumentError unless params[:itemId]
+      raise ArgumentError unless params[:ItemID]
       response = get_json_response(build_request_url('GetItemStatus', params))
       if response.response.has_key?('Item')
         response.results = response.response['Item']
@@ -45,14 +56,14 @@ module Rebay
 
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetShippingCosts.html
     def get_shipping_costs(params)
-      raise ArgumentError unless params[:itemId]
+      raise ArgumentError unless params[:ItemID]
       response = get_json_response(build_request_url('GetShippingCosts', params))
       return response
     end
 
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetMultipleItems.html
     def get_multiple_items(params)
-      raise ArgumentError unless params[:itemId]
+      raise ArgumentError unless params[:ItemID]
       response = get_json_response(build_request_url('GetMultipleItems', params))
       if response.response.has_key?('Item')
         response.results = response.response['Item']
@@ -62,7 +73,7 @@ module Rebay
 
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetUserProfile.html
     def get_user_profile(params)
-      raise ArgumentError unless params[:userId]
+      raise ArgumentError unless params[:UserID]
       response = get_json_response(build_request_url('GetUserProfile', params))
       if response.response.has_key?('User')
         response.results = response.response['User']
@@ -72,7 +83,7 @@ module Rebay
 
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindPopularSearches.html
     def find_popular_searches(params)
-      raise ArgumentError unless params[:categoryId]
+      raise ArgumentError unless params[:CategoryID]
       response = get_json_response(build_request_url('FindPopularSearches', params))
       if response.response.has_key?('PopularSearchResult')
         response.results = response.response['PopularSearchResult']
@@ -82,7 +93,7 @@ module Rebay
 
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindPopularItems.html
     def find_popular_items(params={})
-      raise ArgumentError unless params[:categoryId] or params[:queryKeywords]
+      raise ArgumentError unless params[:CategoryID] or params[:QueryKeywords]
       response = get_json_response(build_request_url('FindPopularItems', params))
       if response.response.has_key?('ItemArray') && response.response['ItemArray'].has_key?('Item')
         response.results = response.response['ItemArray']['Item']
@@ -101,7 +112,7 @@ module Rebay
 
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/GetCategoryInfo.html
     def get_category_info(params)
-      raise ArgumentError unless params[:categoryId]
+      raise ArgumentError unless params[:CategoryID]
       response = get_json_response(build_request_url('GetCategoryInfo', params))
       if response.response.has_key?('CategoryArray') && response.response['CategoryArray'].has_key?('Category')
         response.results = response.response['CategoryArray']['Category']
@@ -117,8 +128,8 @@ module Rebay
 
     private
     def build_request_url(service, params=nil)
-      url = "#{BASE_URL}?callname=#{service}&appid=#{Rebay::Api.app_id}&version=#{VERSION}&responseencoding=JSON&siteid=#{Rebay::Api::EBAY_US}"
-      url += build_rest_payload(params)
+      url = "#{self.class.base_url}?callname=#{service}&appid=#{Rebay::Api.app_id}&version=#{VERSION}&responseencoding=JSON"
+      url += build_rest_payload({siteid: Rebay::Api.default_site_id}.merge(params))
       return url
     end
   end

@@ -7,7 +7,45 @@ module Rebay
       it "should respond to configure" do
         Rebay::Api.should respond_to(:configure)
       end
+      
+      describe "#base_url_prefix" do
+        it "shouldn't be nil" do
+          Rebay::Api.base_url_prefix.should_not be_nil
+        end
+      end
 
+      describe "#base_url_suffix" do
+        it "shouldn't be nil" do
+          Rebay::Api.base_url_suffix.should_not be_nil
+        end
+      end
+      
+      describe "#base_url" do
+        context "api calls should hit the sandbox" do
+          it "should return a sandboxed url" do
+            Rebay::Api.configure do |c|
+              c.sandbox = true
+            end
+          
+            Rebay::Api.base_url.should include "sandbox"
+          end
+        end
+
+        context "api calls shouldn't hit the sandbox" do
+          it "should return a un-sandboxed url" do
+            Rebay::Api.configure do |c|
+              c.sandbox = false
+            end
+
+            Rebay::Api.base_url.should_not include "sandbox"
+          end
+        end
+      end
+
+      describe "#sandbox" do
+        it_behaves_like "a configuration option", :sandbox, true
+      end
+      
       describe "#app_id" do
         it_behaves_like "a configuration option", :app_id, 'super_id-11'
       end
@@ -42,3 +80,4 @@ module Rebay
     end
   end
 end
+    
