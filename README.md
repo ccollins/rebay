@@ -57,8 +57,10 @@ Recent Updates
   ProductID or a ProductID.type, ProductID.Value pair for searching by
   ProductIDs other than Ebay ReferenceIDs.
   
-[https://github.com/peppyheppy](support for dynamic siteid in both configuration and by passing in params)
+[peppyheppy](https://github.com/peppyheppy)
 
+  Added support for dynamic siteid in both configuration and by passing in params
+  
 MIT License
 -----------
 Copyright (c) 2010 Chuck Collins
