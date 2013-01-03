@@ -38,7 +38,27 @@ For my own sanity, I transform this response into a more standard ruby hash and 
 You can check for success or failure of the request:
 	response.success?
 	response.failure?
-	
+  
+Recent Updates
+--------------
+[yarmiganosca](https://github.com/yarmiganosca)
+
+  Added support for using Ebay Sandbox urls (through a configuration
+  variable).
+
+  Changed the way Finding and Shopping generate their base urls. Instead
+  of a class variable, they now call self.base_url, which reads the
+  sandbox configuration variable and either creates a sandbox url or a
+  production url.
+  
+  Updated the conditions under which the Shopping Api calls raise
+  ArgumentErrors, involved changing the cases of the parameters (they
+  changed in the Ebay Api) and adding support for specifying either a
+  ProductID or a ProductID.type, ProductID.Value pair for searching by
+  ProductIDs other than Ebay ReferenceIDs.
+  
+[https://github.com/peppyheppy](support for dynamic siteid in both configuration and by passing in params)
+
 MIT License
 -----------
 Copyright (c) 2010 Chuck Collins
