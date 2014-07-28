@@ -8,7 +8,7 @@ module Rebay
     
     #http://developer.ebay.com/DevZone/finding/CallRef/findItemsAdvanced.html
     def find_items_advanced(params)
-      raise ArgumentError unless params[:keywords] or params[:categoryId]
+      raise ArgumentError unless params[:keywords] or params[:categoryId] or any_item_filter_names_match(params, 'Seller')
       response = get_json_response(build_request_url('findItemsAdvanced', params))
       response.trim(:findItemsAdvancedResponse)
       
@@ -17,7 +17,7 @@ module Rebay
       end
       return response
     end
-  
+
     #http://developer.ebay.com/DevZone/finding/CallRef/findItemsByCategory.html
     def find_items_by_category(params)
       raise ArgumentError unless params[:categoryId]
@@ -98,5 +98,10 @@ module Rebay
       url += build_rest_payload(params)
       return url
     end
+
+    def any_item_filter_names_match(params, test_name)
+      params.select { |k, v| k =~ /itemFilter\(\d+\)\.name/ && v == test_name }.any?
+    end
+
   end
 end
