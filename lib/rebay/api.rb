@@ -30,7 +30,7 @@ module Rebay
       end
       
       def default_site_id
-        @default_site_id || "EBAY_US"
+        @default_site_id ||= "EBAY-US"
       end
       
       def configure
