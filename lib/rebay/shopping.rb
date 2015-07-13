@@ -128,7 +128,7 @@ module Rebay
 
     private
     def build_request_url(service, params=nil)
-      url = "#{self.class.base_url}?callname=#{service}&appid=#{Rebay::Api.app_id}&version=#{VERSION}&responseencoding=JSON"
+      url = "#{self.class.base_url}?callname=#{service}&appid=#{Rebay::Api.app_id}&X-EBAY-SOA-GLOBAL-ID=#{Rebay::Api.default_site_id}&version=#{VERSION}&responseencoding=JSON"
       url += build_rest_payload({siteid: Rebay::Api.default_site_id}.merge(params))
       return url
     end
