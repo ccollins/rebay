@@ -35,10 +35,10 @@
                                 }
                             ],
                             "galleryURL": [
-                                "http:\/\/thumbs2.ebaystatic.com\/pict\/2305301990738080_1.jpg"
+                                "https:\/\/thumbs2.ebaystatic.com\/pict\/2305301990738080_1.jpg"
                             ],
                             "viewItemURL": [
-                                "http:\/\/cgi.ebay.com\/Lot-4-Brand-Named-Clarinet-Mouthpieces-USED-\/230530199073?pt=LH_DefaultDomain_0"
+                                "https:\/\/cgi.ebay.com\/Lot-4-Brand-Named-Clarinet-Mouthpieces-USED-\/230530199073?pt=LH_DefaultDomain_0"
                             ],
                             "paymentMethod": [
                                 "PayPal"
@@ -150,10 +150,10 @@
                                 }
                             ],
                             "galleryURL": [
-                                "http:\/\/thumbs1.ebaystatic.com\/pict\/1304361551368080_1.jpg"
+                                "https:\/\/thumbs1.ebaystatic.com\/pict\/1304361551368080_1.jpg"
                             ],
                             "viewItemURL": [
-                                "http:\/\/cgi.ebay.com\/NEW-BAND-STUDENT-Bb-CLARINET-11-REED-BOOK-CARE-KIT-CASE-\/130436155136?pt=LH_DefaultDomain_0"
+                                "https:\/\/cgi.ebay.com\/NEW-BAND-STUDENT-Bb-CLARINET-11-REED-BOOK-CARE-KIT-CASE-\/130436155136?pt=LH_DefaultDomain_0"
                             ],
                             "paymentMethod": [
                                 "PayPal",
@@ -269,7 +269,7 @@
                 }
             ],
             "itemSearchURL": [
-                "http:\/\/shop.ebay.com\/10181\/i.html?_ddo=1&_ipg=2&_pgn=1"
+                "https:\/\/shop.ebay.com\/10181\/i.html?_ddo=1&_ipg=2&_pgn=1"
             ]
         }
     ]

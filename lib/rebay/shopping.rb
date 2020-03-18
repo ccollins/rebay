@@ -4,7 +4,7 @@ module Rebay
     
     class << self
       def base_url_prefix
-        "http://open.api"
+        "https://open.api"
       end
     
       def base_url_suffix

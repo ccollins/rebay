@@ -76,8 +76,8 @@ module Rebay
                      "item"=>[{"itemId"=>"300471157219","title"=>"Minas Tirith 1990 Tolkien fanzine journal LOTR Hobbit",
                               "globalId"=>"EBAY-US","primaryCategory"=>{"categoryId"=>"280","categoryName"=>"Magazine Back Issues"},
                               "secondaryCategory"=>{"categoryId"=>"29799","categoryName"=>"Other"},
-                              "galleryURL"=>"http:\/\/thumbs4.ebaystatic.com\/pict\/3004711572198080_1.jpg",
-                              "viewItemURL"=>"http:\/\/cgi.ebay.com\/Minas-Tirith-1990-Tolkien-fanzine-journal-LOTR-Hobbit-\/300471157219?pt=Magazines",
+                              "galleryURL"=>"https:\/\/thumbs4.ebaystatic.com\/pict\/3004711572198080_1.jpg",
+                              "viewItemURL"=>"https:\/\/cgi.ebay.com\/Minas-Tirith-1990-Tolkien-fanzine-journal-LOTR-Hobbit-\/300471157219?pt=Magazines",
                               "paymentMethod"=>"PayPal","autoPay"=>"false","postalCode"=>"55403","location"=>"Minneapolis,MN,USA",
                               "country"=>"US","shippingInfo"=>{"shippingServiceCost"=>{"@currencyId"=>"USD","__value__"=>"2.99"},
                                                                "shippingType"=>"Flat","shipToLocations"=>"Worldwide"},
@@ -91,8 +91,8 @@ module Rebay
                               {"itemId"=>"300471157219","title"=>"Minas Tirith 1990 Tolkien fanzine journal LOTR Hobbit",
                               "globalId"=>"EBAY-US","primaryCategory"=>{"categoryId"=>"280","categoryName"=>"Magazine Back Issues"},
                               "secondaryCategory"=>{"categoryId"=>"29799","categoryName"=>"Other"},
-                              "galleryURL"=>"http:\/\/thumbs4.ebaystatic.com\/pict\/3004711572198080_1.jpg",
-                              "viewItemURL"=>"http:\/\/cgi.ebay.com\/Minas-Tirith-1990-Tolkien-fanzine-journal-LOTR-Hobbit-\/300471157219?pt=Magazines",
+                              "galleryURL"=>"https:\/\/thumbs4.ebaystatic.com\/pict\/3004711572198080_1.jpg",
+                              "viewItemURL"=>"https:\/\/cgi.ebay.com\/Minas-Tirith-1990-Tolkien-fanzine-journal-LOTR-Hobbit-\/300471157219?pt=Magazines",
                               "paymentMethod"=>"PayPal","autoPay"=>"false","postalCode"=>"55403","location"=>"Minneapolis,MN,USA",
                               "country"=>"US","shippingInfo"=>{"shippingServiceCost"=>{"@currencyId"=>"USD","__value__"=>"2.99"},
                                                                "shippingType"=>"Flat","shipToLocations"=>"Worldwide"},
@@ -104,7 +104,7 @@ module Rebay
                                               "listingType"=>"Auction","gift"=>"false"},
                               "condition"=>{"conditionId"=>"4000","conditionDisplayName"=>"Very Good"}}]},
                    "paginationOutput"=>{"pageNumber"=>"1","entriesPerPage"=>"2","totalPages"=>"2359","totalEntries"=>"4717"},
-                   "itemSearchURL"=>"http:\/\/shop.ebay.com\/i.html?_nkw=tolkien&_ddo=1&_ipg=2&_pgn=1"}
+                   "itemSearchURL"=>"https:\/\/shop.ebay.com\/i.html?_nkw=tolkien&_ddo=1&_ipg=2&_pgn=1"}
         @response.results = @response.response['searchResult']['item']
       end
       

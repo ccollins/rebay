@@ -18,7 +18,7 @@ module Rebay
       end
 
       def base_url_prefix
-        "http://svcs"
+        "https://svcs"
       end
 
       def base_url_suffix

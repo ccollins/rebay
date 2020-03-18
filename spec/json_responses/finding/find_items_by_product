@@ -35,10 +35,10 @@
                                 }
                             ],
                             "galleryURL": [
-                                "http:\/\/thumbs4.ebaystatic.com\/pict\/1105934189038080_1.jpg"
+                                "https:\/\/thumbs4.ebaystatic.com\/pict\/1105934189038080_1.jpg"
                             ],
                             "viewItemURL": [
-                                "http:\/\/cgi.ebay.com\/Little-Mermaid-DVD-2006-2-Disc-Platinum-Edition-\/110593418903?pt=US_DVD_HD_DVD_Blu_ray"
+                                "https:\/\/cgi.ebay.com\/Little-Mermaid-DVD-2006-2-Disc-Platinum-Edition-\/110593418903?pt=US_DVD_HD_DVD_Blu_ray"
                             ],
                             "productId": [
                                 {
@@ -156,10 +156,10 @@
                                 }
                             ],
                             "galleryURL": [
-                                "http:\/\/thumbs1.ebaystatic.com\/pict\/2507050272648080_1.jpg"
+                                "https:\/\/thumbs1.ebaystatic.com\/pict\/2507050272648080_1.jpg"
                             ],
                             "viewItemURL": [
-                                "http:\/\/cgi.ebay.com\/Little-Mermaid-DVD-2006-2-Disc-Platinum-Edition-\/250705027264?pt=US_DVD_HD_DVD_Blu_ray"
+                                "https:\/\/cgi.ebay.com\/Little-Mermaid-DVD-2006-2-Disc-Platinum-Edition-\/250705027264?pt=US_DVD_HD_DVD_Blu_ray"
                             ],
                             "productId": [
                                 {
@@ -273,7 +273,7 @@
                 }
             ],
             "itemSearchURL": [
-                "http:\/\/catalog.ebay.com\/53039031?_ddo=1&_ipg=2&_pgn=1"
+                "https:\/\/catalog.ebay.com\/53039031?_ddo=1&_ipg=2&_pgn=1"
             ]
         }
     ]
