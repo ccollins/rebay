@@ -35,10 +35,10 @@
                                 }
                             ],
                             "galleryURL": [
-                                "http:\/\/thumbs3.ebaystatic.com\/pict\/2904805664148080_2.jpg"
+                                "https:\/\/thumbs3.ebaystatic.com\/pict\/2904805664148080_2.jpg"
                             ],
                             "viewItemURL": [
-                                "http:\/\/cgi.ebay.com\/Harry-Potter-and-Order-Phoenix-1-DVD-99-CENT-\/290480566414?pt=US_DVD_HD_DVD_Blu_ray"
+                                "https:\/\/cgi.ebay.com\/Harry-Potter-and-Order-Phoenix-1-DVD-99-CENT-\/290480566414?pt=US_DVD_HD_DVD_Blu_ray"
                             ],
                             "productId": [
                                 {
@@ -153,10 +153,10 @@
                                 }
                             ],
                             "galleryURL": [
-                                "http:\/\/thumbs2.ebaystatic.com\/pict\/3205950456618080_1.jpg"
+                                "https:\/\/thumbs2.ebaystatic.com\/pict\/3205950456618080_1.jpg"
                             ],
                             "viewItemURL": [
-                                "http:\/\/cgi.ebay.com\/Harry-Potter-and-Order-Phoenix-J-K-R-\/320595045661?pt=US_Audiobooks"
+                                "https:\/\/cgi.ebay.com\/Harry-Potter-and-Order-Phoenix-J-K-R-\/320595045661?pt=US_Audiobooks"
                             ],
                             "productId": [
                                 {
@@ -273,7 +273,7 @@
                 }
             ],
             "itemSearchURL": [
-                "http:\/\/shop.ebay.com\/i.html?_nkw=harry+potter+phoenix&_ddo=1&_ipg=2&_pgn=1"
+                "https:\/\/shop.ebay.com\/i.html?_nkw=harry+potter+phoenix&_ddo=1&_ipg=2&_pgn=1"
             ]
         }
     ]

@@ -35,10 +35,10 @@
                                 }
                             ],
                             "galleryURL": [
-                                "http:\/\/thumbs3.ebaystatic.com\/pict\/3304591736828080_2.jpg"
+                                "https:\/\/thumbs3.ebaystatic.com\/pict\/3304591736828080_2.jpg"
                             ],
                             "viewItemURL": [
-                                "http:\/\/cgi.ebay.com\/zebra-12-18-24-3-3t-outfit-dress-TUTU-BIRTHDAY-girls-\/330459173682?pt=LH_DefaultDomain_0"
+                                "https:\/\/cgi.ebay.com\/zebra-12-18-24-3-3t-outfit-dress-TUTU-BIRTHDAY-girls-\/330459173682?pt=LH_DefaultDomain_0"
                             ],
                             "paymentMethod": [
                                 "PayPal"
@@ -145,7 +145,7 @@
                 }
             ],
             "itemSearchURL": [
-                "http:\/\/shop.ebay.com\/10159\/i.html?_ddo=1&_ipg=100&_pgn=1"
+                "https:\/\/shop.ebay.com\/10159\/i.html?_ddo=1&_ipg=100&_pgn=1"
             ]
         }
     ]

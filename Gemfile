@@ -1,7 +1,7 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 group :dependencies do
-  gem 'json'
+  gem 'json', '~> 1.8'
 end
   
 group :development do
