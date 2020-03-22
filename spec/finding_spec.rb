@@ -16,6 +16,9 @@ module Rebay
     end
     
     context "after creation" do
+      it "should provide find_completed_items" do
+        @finder.should respond_to(:find_completed_items)
+      end
       it "should provide find_items_advanced" do
         @finder.should respond_to(:find_items_advanced)
       end
@@ -44,7 +47,39 @@ module Rebay
         @finder.should respond_to(:get_version)
       end
     end
-    
+
+    context "when calling find_completed_items" do
+      it "should fail without args" do
+        lambda { @finder.find_completed_items }.should raise_error(ArgumentError)
+      end
+
+      it "should return a hash response for a category id" do
+        @finder.find_completed_items({:categoryId => 1}).class.should eq(Rebay::Response)
+      end
+
+      it "should return a hash response for keywords" do
+        @finder.find_completed_items({:keywords => 'feist'}).class.should eq(Rebay::Response)
+      end
+
+      it "should succeed with a category id" do
+        @finder.find_completed_items({:categoryId => 1}).success?.should be_true
+      end
+
+      it "should succeed with a keyword" do
+        @finder.find_completed_items({:keywords => 'feist'}).success?.should be_true
+      end
+
+      it "should iterate over results" do
+        json = JSON.parse(File.read(File.dirname(__FILE__) + "/json_responses/finding/find_completed_items"))
+        @finder.stub!(:get_json_response).and_return(Rebay::Response.new(json))
+        response = @finder.find_completed_items({:categoryId => 1})
+
+        count = 0
+        response.each { |r| count = count + 1 }
+        count.should eq(2)
+      end
+    end
+
     context "when calling find_items_advanced" do     
       it "should fail without args" do
         lambda { @finder.find_items_advanced }.should raise_error(ArgumentError)
