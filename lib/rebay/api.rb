@@ -41,7 +41,14 @@ module Rebay
     protected
 
     def get_json_response(url)
-      Rebay::Response.new(JSON.parse(Net::HTTP.get_response(URI.parse(url)).body))
+      uri = URI.parse(url)
+      user_agent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13G34'
+      response = nil
+      Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+        request = Net::HTTP::Get.new(uri, { 'User-Agent' => user_agent })
+        response = http.request request # Net::HTTPResponse object
+      end
+      Rebay::Response.new(JSON.parse(response.body))
     end
 
     def build_rest_payload(params)
