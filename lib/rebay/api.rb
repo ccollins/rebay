@@ -44,7 +44,7 @@ module Rebay
       uri = URI.parse(url)
       user_agent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13G34'
       response = nil
-      Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+      Net::HTTP.start(uri.host, 443, use_ssl: true) do |http|
         request = Net::HTTP::Get.new(uri, { 'User-Agent' => user_agent })
         response = http.request request # Net::HTTPResponse object
       end
