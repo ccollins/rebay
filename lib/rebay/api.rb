@@ -6,8 +6,6 @@ module Rebay
   class Api
     # default site is EBAY_US, for other available sites see eBay documentation:
     # http://developer.ebay.com/DevZone/merchandising/docs/Concepts/SiteIDToGlobalID.html
-
-
     class << self
       attr_accessor :app_id, :default_site_id, :sandbox
 
@@ -38,13 +36,22 @@ module Rebay
       end
     end
 
+    attr_accessor :proxy_url, :proxy_port, :proxy_username, :proxy_password, :user_agent
+
+    def initialize(proxy_url: nil, proxy_port: nil, proxy_username: nil, proxy_password: nil, user_agent: 'eBayiPhone/6.7.0')
+      @proxy_url = proxy_url
+      @proxy_port = proxy_port
+      @proxy_username = proxy_username
+      @proxy_password = proxy_password
+      @user_agent = user_agent
+    end
+
     protected
 
     def get_json_response(url)
       uri = URI.parse(url)
-      user_agent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13G34'
       response = nil
-      Net::HTTP.start(uri.host, 443, use_ssl: true) do |http|
+      Net::HTTP.start(uri.host, 443, proxy_url, proxy_port, proxy_username, proxy_password, use_ssl: true) do |http|
         request = Net::HTTP::Get.new(uri, { 'User-Agent' => user_agent })
         response = http.request request # Net::HTTPResponse object
       end

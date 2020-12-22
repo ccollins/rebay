@@ -1,17 +1,17 @@
 module Rebay
   class Shopping < Rebay::Api
     VERSION = '793'
-    
+
     class << self
       def base_url_prefix
         "http://open.api"
       end
-    
+
       def base_url_suffix
         "ebay.com/shopping"
       end
     end
-    
+
     #http://developer.ebay.com/DevZone/shopping/docs/CallRef/FindProducts.html
     def find_products(params)
       raise ArgumentError unless params[:CategoryID] or params[:ProductID] or params[:QueryKeywords] or
@@ -128,7 +128,8 @@ module Rebay
 
     private
     def build_request_url(service, params=nil)
-      url = "#{self.class.base_url}?callname=#{service}&appid=#{Rebay::Api.app_id}&X-EBAY-SOA-GLOBAL-ID=#{Rebay::Api.default_site_id}&version=#{VERSION}&responseencoding=JSON"
+      app_id = params.key?(:app_id) && params.delete(:app_id)
+      url = "#{self.class.base_url}?callname=#{service}&appid=#{app_id || Rebay::Api.app_id}&X-EBAY-SOA-GLOBAL-ID=#{Rebay::Api.default_site_id}&version=#{VERSION}&responseencoding=JSON"
       url += build_rest_payload({siteid: Rebay::Api.default_site_id}.merge(params))
       return url
     end
