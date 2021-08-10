@@ -7,7 +7,7 @@ module Rebay
     # default site is EBAY_US, for other available sites see eBay documentation:
     # http://developer.ebay.com/DevZone/merchandising/docs/Concepts/SiteIDToGlobalID.html
     class << self
-      attr_accessor :app_id, :default_site_id, :sandbox, :token
+      attr_accessor :app_id, :default_site_id, :sandbox
 
       def base_url
         [base_url_prefix,

@@ -1,5 +1,7 @@
 module Rebay
   class Shopping < Rebay::Api
+    attr_accessor :token
+
     VERSION = '793'
 
     class << self
@@ -136,7 +138,7 @@ module Rebay
 
     def headers
       {
-        'X-EBAY-API-IAF-TOKEN' => Rebay::Api.token,
+        'X-EBAY-API-IAF-TOKEN' => self.token,
       }
     end
   end
