@@ -2,7 +2,7 @@ module Rebay
   class Shopping < Rebay::Api
     attr_accessor :token
 
-    VERSION = '793'
+    VERSION = '1199'
 
     class << self
       def base_url_prefix
